@@ -31,3 +31,6 @@ alias ld="exa -D"
 alias lad="exa -aD"
 alias lld="exa -lD"
 alias llad="exa -laD"
+
+# VSCodium
+alias co = codium
