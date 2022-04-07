@@ -18,6 +18,8 @@ set -gx EDITOR "vim"
 alias i="arch -x86_64"
 
 alias py=python3
+alias e=exit
+alias c=clear
 
 # ls
 alias l="exa"
