@@ -47,4 +47,25 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
+name = 'format'
+
+[[layers]]
 name = "colorscheme"
+
+[[layers]]
+name = 'lang#markdown'
+
+[[layers]]
+name = "lang#vim"
+
+[[layers]]
+name = "checkers"
+lint-engine = "ale"
+lint_on_the_fly = true
+
+[[custom_plugins]]
+name = 'dense-analysis/ale'
+
+[[custom_plugins]]
+name = 'fannheyward/coc-markdownlint'
+
