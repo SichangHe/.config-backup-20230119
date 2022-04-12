@@ -22,6 +22,7 @@ alias py=python3
 alias vi=nvim
 alias e=exit
 alias c=clear
+alias rsy='rsync --recursive --inplace --times --compress --exclude "**.DS_STORE" -hP'
 
 # ls
 alias l="exa"
