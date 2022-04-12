@@ -3,6 +3,7 @@ set PATH -gx /opt/homebrew/bin $PATH
 set PATH -gx ~/.cargo/bin $PATH
 set PATH -gx /Applications/Julia-1.7.app/Contents/Resources/julia/bin $PATH
 set PATH -gx /opt/homebrew/opt/llvm/bin $PATH
+set PATH -gx ~/.local/bin $PATH
 
 # starship
 starship init fish | source 
