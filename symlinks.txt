@@ -4,6 +4,7 @@ ln -s ~/.config/markdownlintrc.jsonc ~/.markdownlintr
 ln -s ~/.config/SpaceVim.d/ ~/.SpaceVim.d
 ln -s ~/.config/Code ~/.vscode
 ln -s ~/.config/Code ~/.vscode-oss
+ln -s ~/.config/mume ~/.local/state/mume
 
 # macOS
 ln -s ~/.config/Code ~/Library/Application\ Support/VSCodium
