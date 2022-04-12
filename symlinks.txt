@@ -2,6 +2,8 @@ ln -s ~/.vscode ~/.vscode-oss
 ln -s ~/.config/curlrc ~/.curlrc
 ln -s ~/.config/markdownlintrc.jsonc ~/.markdownlintr
 ln -s ~/.config/SpaceVim.d/ ~/.SpaceVim.d
+ln -s ~/.config/Code ~/.vscode
+ln -s ~/.config/Code ~/.vscode-oss
 
 # macOS
 ln -s ~/.config/Code ~/Library/Application\ Support/VSCodium
