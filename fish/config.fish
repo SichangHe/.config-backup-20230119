@@ -1,3 +1,12 @@
+# path
+source ~/.config/fish/path.fish
+
+# alias
+source ~/.config/fish/alias.sh
+
+# proxy
+source ~/.config/fish/proxy.fish
+
 #! kernel specific {
 
 if [ (uname) = Darwin ] #! Darwin {{
@@ -17,15 +26,6 @@ else if [ (uname) = Linux ] #! Linux {{
     #! }}
 end
 #! }
-
-# path
-source ~/.config/fish/path.fish
-
-# alias
-source ~/.config/fish/alias.sh
-
-# proxy
-source ~/.config/fish/proxy.fish
 
 # starship
 starship init fish | source
