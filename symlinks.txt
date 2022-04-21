@@ -12,3 +12,4 @@ ln -s ~/.config/Code ~/Library/Application\ Support/Code
 
 # linux
 ln -s ~/.config/Code ~/.local/share/code-server
+sudo ln -s ~/.config/Code/extensions /usr/lib/code/extensions
