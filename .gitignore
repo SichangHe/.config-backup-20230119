@@ -1,6 +1,8 @@
 **.DS_Store
-**.json
 **.xml
+exercism/
+mume/
+configstore/
 
 # from Arch KDE {
 DisplayCAL/

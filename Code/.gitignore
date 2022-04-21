@@ -21,3 +21,6 @@ machineid
 coder-logs/
 heartbeat
 extensions/
+Backups/
+CachedConfigurations/
+/*.json

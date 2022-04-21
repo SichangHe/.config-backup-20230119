@@ -63,6 +63,9 @@ name = "checkers"
 lint-engine = "ale"
 lint_on_the_fly = true
 
+[[layers]]
+name = 'lang#python'
+
 [[custom_plugins]]
 name = 'dense-analysis/ale'
 

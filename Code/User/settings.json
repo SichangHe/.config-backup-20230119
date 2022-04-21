@@ -1,0 +1,327 @@
+{
+    // C/C++
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.debugShortcut": true,
+    "C_Cpp.clang_format_path": "/opt/homebrew/opt/llvm/bin/clang-format",
+    "C_Cpp.vcFormat.wrap.preserveBlocks": "never",
+    "C_Cpp.vcFormat.space.withinSquareBrackets": true,
+    "C_Cpp.clang_format_style": "WebKit",
+    // cSpell
+    "cSpell.userWords": [
+        "Abelian",
+        "antiderivative",
+        "arctan",
+        "autoboxing",
+        "Bendixson",
+        "Bendixson's",
+        "biconditional",
+        "bijective",
+        "binormal",
+        "bivariate",
+        "bmatrix",
+        "Cacher",
+        "Chebyshev",
+        "chrono",
+        "coalbedo",
+        "codomain",
+        "Communitative",
+        "dedup",
+        "Deque",
+        "displaystyle",
+        "downarrow",
+        "dukekunshan",
+        "eigen",
+        "FOSS",
+        "Frobenius",
+        "geckodriver",
+        "Grobman",
+        "heapify",
+        "Heiles",
+        "Henon",
+        "hhmmss",
+        "hhmmssxxx",
+        "hrefs",
+        "infty",
+        "injective",
+        "invertibility",
+        "Jaccard",
+        "Jiang",
+        "jieba",
+        "Karush",
+        "katex",
+        "LDLT",
+        "Leftarrow",
+        "Leftrightarrow",
+        "linearization",
+        "linearize",
+        "Lipschitz",
+        "longleftrightarrow",
+        "longrightarrow",
+        "longwave",
+        "Lyapunov",
+        "Lyapunov's",
+        "mapsto",
+        "marp",
+        "mathbb",
+        "mathbf",
+        "mathcal",
+        "mathjax",
+        "mathrm",
+        "mathscr",
+        "mdbook",
+        "Millis",
+        "Neovide",
+        "Neovim",
+        "nolog",
+        "orthogonalization",
+        "orthogonalize",
+        "overdamped",
+        "overfitting",
+        "Pacman",
+        "pagerank",
+        "pbcopy",
+        "pmatrix",
+        "polytope",
+        "Ponens",
+        "posteriori",
+        "preimage",
+        "println",
+        "printpdf",
+        "pseudocode",
+        "pyfunction",
+        "pymodule",
+        "Raphson",
+        "reqwest",
+        "Ricatti",
+        "Rightarrow",
+        "scrapy",
+        "Seidel",
+        "semidefinite",
+        "Sichang",
+        "Sīchàng",
+        "sichanghe",
+        "stackrel",
+        "Steinitz",
+        "struct",
+        "subseteq",
+        "surjective",
+        "Tabnine",
+        "Tollendo",
+        "Tollens",
+        "Traceback",
+        "transversality",
+        "uncountably",
+        "varepsilon",
+        "waitlist",
+        "Wronskian"
+    ],
+    // editor
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.accessibilitySupport": "off",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSurroundingLines": 3,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.formatOnSave": true,
+    "editor.hover.delay": 0,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.snippetSuggestions": "top",
+    "editor.suggestSelection": "first",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    // errorLens
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning"
+    ],
+    "errorLens.messageBackgroundMode": "none",
+    // files
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.git": false,
+        "**/.project": true,
+        "**/.settings": true
+    },
+    "files.watcherExclude": {
+        "**/.git": true,
+        "**.pdf": true,
+        "**.docx": true,
+        "**.png": true,
+        "**.jpg": true,
+        "**.log": true,
+        "**/__pycache__": true
+    },
+    // git/gitlens
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.hovers.enabled": false,
+    "gitlens.defaultDateFormat": "YYYY.MM.DD",
+    "gitlens.defaultDateShortFormat": "MM.DD",
+    "gitlens.statusBar.enabled": false,
+    "grammarly.autoActivate": false,
+    // java/julia
+    "java.format.settings.url": "/Users/sichanghe/Documents/Java files/newLineBrace.xml",
+    "java.help.firstView": "gettingStarted",
+    "julia.enableTelemetry": false,
+    "julia.executablePath": "/Applications/Julia-1.7.app/Contents/Resources/julia/bin/julia",
+    "julia.NumThreads": 8,
+    "julia.symbolCacheDownload": true,
+    // latex
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "latex-workshop.bibtex-format.trailingComma": true,
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.build.forceRecipeUsage": false,
+    "latex-workshop.view.pdf.viewer": "external",
+    "ligaturesLimited.selectionMode": "selection",
+    "liveServer.settings.donotVerifyTags": true,
+    // markdown
+    "markdown.extension.list.indentationSize": "inherit",
+    "markdown.marp.enableHtml": true,
+    "markdown.preview.breaks": true,
+    "markdown.preview.fontSize": 24,
+    "markdown-preview-enhanced.codeBlockTheme": "vue.css",
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "markdown-preview-enhanced.previewTheme": "github-light.css",
+    "markdown-preview-enhanced.breakOnSingleNewLine": false,
+    "markdown-preview-enhanced.singlePreview": false,
+    "markdown.extension.orderedList.marker": "one",
+    "markdown.extension.orderedList.autoRenumber": false,
+    // markdownlint
+    "markdownlint.config": {
+        "default": true,
+        "single-title": false,
+        "heading-style": {
+            "style": "atx"
+        },
+        "ul-style": {
+            "style": "dash"
+        },
+        "ul-indent": {
+            "indent": 4
+        },
+        "line-length": true,
+        "ol-prefix": {
+            "style": "one"
+        },
+        "no-inline-html": false,
+        "hr-style": {
+            "style": "---"
+        },
+        "fenced-code-language": false,
+        "blanks-around-headings": true,
+        "code-block-style": {
+            "style": "fenced"
+        },
+        "code-fence-style": {
+            "style": "backtick"
+        },
+        "emphasis-style": {
+            "style": "asterisk"
+        },
+        "strong-style": {
+            "style": "asterisk"
+        }
+    },
+    "markdownlint.run": "onSave",
+    // markdownShortcuts
+    "markdownShortcuts.icons.bold": false,
+    "markdownShortcuts.icons.bullets": false,
+    "markdownShortcuts.icons.strikethrough": false,
+    "markdownShortcuts.icons.italic": false,
+    // prettier
+    "prettier.tabWidth": 4,
+    // python
+    "pylance.insidersChannel": "daily",
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.formatting.blackPath": "/opt/homebrew/bin/black",
+    "python.formatting.provider": "black",
+    "python.languageServer": "Pylance",
+    "python.linting.mypyArgs": [
+        "--follow-imports=silent",
+        "--ignore-missing-imports",
+        "--show-column-numbers",
+        "--no-pretty",
+        "--allow-redefinition"
+    ],
+    "remote.SSH.useLocalServer": false,
+    // rust-analyzer
+    "rust-analyzer.cargo.allFeatures": true,
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.inlayHints.lifetimeElisionHints": "skip_trivial",
+    "search.exclude": {
+        "**/.git": true,
+        "**.pdf": true,
+        "**.docx": true,
+        "**.png": true,
+        "**.jpg": true,
+        "**/__pycache__": true
+    },
+    "search.seedWithNearestWord": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "tabnine.experimentalAutoImports": true,
+    // terminal
+    "terminal.explorerKind": "external",
+    "terminal.external.osxExec": "kitty.app",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.env.osx": {},
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.inheritEnv": false,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    // workbench
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#001B62",
+        "editorBracketHighlight.foreground2": "#004F27",
+        "editorBracketHighlight.foreground3": "#3E3E00",
+        "editorBracketHighlight.foreground4": "#4E0143",
+        "editorBracketHighlight.foreground5": "#6E0000"
+    },
+    "workbench.colorTheme": "Quiet Light",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.preferredDarkColorTheme": "Quiet Light",
+    "workbench.preferredHighContrastColorTheme": "Quiet Light",
+    "workbench.preferredLightColorTheme": "Quiet Light",
+    "window.zoomLevel": 3,
+    // language
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+        "editor.quickSuggestions": true,
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "matklad.rust-analyzer"
+    },
+    "[fish]": {
+        "editor.defaultFormatter": "zgm.vscode-fish"
+    },
+}
