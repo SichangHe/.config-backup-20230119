@@ -15,42 +15,14 @@
 		"prefix": "h6",
 		"body": "###### $0"
 	},
-	"java code": {
-		"prefix": "java",
+	"code": {
+		"prefix": "code",
 		"body": [
-			"```java",
-			"$1",
-			"```",
-			"$0"
-		],
-		"description": "create java code block"
-	},
-	"rust code": {
-		"prefix": "rust",
-		"body": [
-			"```rust",
+			"```$1",
 			"$0",
 			"```"
 		],
-		"description": "create rust code block"
-	},
-	"python code": {
-		"prefix": "py",
-		"body": [
-			"```python",
-			"$0",
-			"```"
-		],
-		"description": "create python code block"
-	},
-	"shell script": {
-		"prefix": "sh",
-		"body": [
-			"```shell",
-			"$0",
-			"```"
-		],
-		"description": "create shell script code block"
+		"description": "create code block"
 	},
 	"add math subscript": {
 		"prefix": "sub",
@@ -107,10 +79,6 @@
 		],
 		"description": "a pair of braces"
 	},
-	"single tick": {
-		"prefix": "'",
-		"body": "’"
-	},
 	"rank": {
 		"prefix": "rank",
 		"body": "\\text{rank}($0)"
@@ -118,5 +86,21 @@
 	"nullity": {
 		"prefix": "nullity",
 		"body": "\\text{nullity}($0)"
+	},
+	"1 to n": {
+		"prefix": "oneton",
+		"body": "$1_1,\\cdots,$1_n$0"
+	},
+	"1 to m": {
+		"prefix": "onetom",
+		"body": "$1_1,\\cdots,$1_m$0"
+	},
+	"norm with double bar": {
+		"prefix": "norm",
+		"body": "\\lVert $0\\rVert"
+	},
+	"left and right angle": {
+		"prefix": "angle",
+		"body": "\\langle $0\\rangle"
 	}
 }

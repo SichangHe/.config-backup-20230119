@@ -4,10 +4,6 @@
         "command": "workbench.action.duplicateWorkspaceInNewWindow"
     },
     {
-        "key": "alt+cmd+h",
-        "command": "markdown.extension.printToHtml"
-    },
-    {
         "key": "cmd+y",
         "command": "hideSuggestWidget",
         "when": "suggestWidgetVisible && textInputFocus"
@@ -154,5 +150,34 @@
         "key": "k",
         "when": "neovim.mode == insert && editorTextFocus",
         "args": "k"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "dance.modes.set.normal",
+        "when": "editorTextFocus && dance.mode == 'insert'"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "dance.cancel",
+        "when": "editorTextFocus && dance.mode == 'input'"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "dance.cancel",
+        "when": "editorTextFocus && !dance.isRecording && !markersNavigationVisible && dance.mode == 'normal'"
+    },
+    {
+        "key": "cmd+b",
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "sequence": [
+                "workbench.action.toggleActivityBarVisibility",
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        }
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
     }
 ]

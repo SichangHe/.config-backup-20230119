@@ -42,6 +42,8 @@
         "hhmmss",
         "hhmmssxxx",
         "hrefs",
+        "inequation",
+        "infimum",
         "infty",
         "injective",
         "invertibility",
@@ -50,12 +52,14 @@
         "jieba",
         "Karush",
         "katex",
+        "Kunshan",
         "LDLT",
         "Leftarrow",
         "Leftrightarrow",
         "linearization",
         "linearize",
         "Lipschitz",
+        "lockdown",
         "longleftrightarrow",
         "longrightarrow",
         "longwave",
@@ -73,7 +77,9 @@
         "Millis",
         "Neovide",
         "Neovim",
+        "Neumann",
         "nolog",
+        "nonnegativity",
         "orthogonalization",
         "orthogonalize",
         "overdamped",
@@ -104,9 +110,12 @@
         "stackrel",
         "Steinitz",
         "struct",
+        "submultiplicative",
         "subseteq",
+        "supremum",
         "surjective",
         "Tabnine",
+        "tlmgr",
         "Tollendo",
         "Tollens",
         "Traceback",
@@ -186,7 +195,6 @@
     "markdown.marp.enableHtml": true,
     "markdown.preview.breaks": true,
     "markdown.preview.fontSize": 24,
-    "markdown-preview-enhanced.codeBlockTheme": "vue.css",
     "markdown-preview-enhanced.enableScriptExecution": true,
     "markdown-preview-enhanced.previewTheme": "github-light.css",
     "markdown-preview-enhanced.breakOnSingleNewLine": false,
@@ -297,7 +305,6 @@
     "workbench.preferredDarkColorTheme": "Quiet Light",
     "workbench.preferredHighContrastColorTheme": "Quiet Light",
     "workbench.preferredLightColorTheme": "Quiet Light",
-    "window.zoomLevel": 3,
     // language
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -324,4 +331,9 @@
     "[fish]": {
         "editor.defaultFormatter": "zgm.vscode-fish"
     },
+    "remote.SSH.remotePlatform": {
+        "10.200.20.211": "linux"
+    },
+    "window.zoomLevel": 3,
+    "workbench.panel.defaultLocation": "right",
 }
