@@ -1,14 +1,15 @@
-ln -s ~/.vscode ~/.vscode-oss
 ln -s ~/.config/curlrc ~/.curlrc
 ln -s ~/.config/markdownlintrc.jsonc ~/.markdownlintr
 ln -s ~/.config/SpaceVim.d/ ~/.SpaceVim.d
 ln -s ~/.config/Code ~/.vscode
 ln -s ~/.config/Code ~/.vscode-oss
+ln -s ~/.config/Code ~/.vscode-insider
 ln -s ~/.config/mume ~/.local/state/mume
 
 # macOS
 ln -s ~/.config/Code ~/Library/Application\ Support/VSCodium
 ln -s ~/.config/Code ~/Library/Application\ Support/Code
+ln -s ~/.config/Code ~/Library/Application\ Support/Code\ -\ Insiders
 
 # linux
 ln -s ~/.config/Code ~/.local/share/code-server

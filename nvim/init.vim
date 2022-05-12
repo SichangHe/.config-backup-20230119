@@ -1,3 +1,4 @@
+set clipboard=unnamed
 if exists('g:vscode')
     " VSCode extension
 else

@@ -1,5 +1,5 @@
 alias c=clear
-alias co=codium
+alias co=code-insiders
 alias e=exit
 alias py=python3
 alias rsy='rsync --recursive --inplace --times --compress --exclude "**.DS_STORE" -hP'

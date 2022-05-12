@@ -1,4 +1,5 @@
 {
+    "breadcrumbs.enabled": false,
     // C/C++
     "C_Cpp.default.cppStandard": "c++20",
     "C_Cpp.default.cStandard": "c17",
@@ -10,6 +11,7 @@
     // cSpell
     "cSpell.userWords": [
         "Abelian",
+        "Alacritty",
         "antiderivative",
         "arctan",
         "autoboxing",
@@ -46,6 +48,7 @@
         "infimum",
         "infty",
         "injective",
+        "Inkscape",
         "invertibility",
         "Jaccard",
         "Jiang",
@@ -85,6 +88,7 @@
         "overdamped",
         "overfitting",
         "Pacman",
+        "pagebreak",
         "pagerank",
         "pbcopy",
         "pmatrix",
@@ -100,6 +104,7 @@
         "Raphson",
         "reqwest",
         "Ricatti",
+        "Riesz",
         "Rightarrow",
         "scrapy",
         "Seidel",
@@ -135,7 +140,9 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 16,
     "editor.formatOnSave": true,
+    "editor.glyphMargin": false,
     "editor.hover.delay": 0,
+    "editor.lineDecorationsWidth": 0,
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
     "editor.snippetSuggestions": "top",
@@ -292,7 +299,10 @@
     "terminal.integrated.inheritEnv": false,
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.title": "${dirty}${activeEditorLong} ㅤ ㅤ ${rootName}",
+    "window.zoomLevel": 3,
     // workbench
+    "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
         "editorBracketHighlight.foreground1": "#001B62",
         "editorBracketHighlight.foreground2": "#004F27",
@@ -302,6 +312,7 @@
     },
     "workbench.colorTheme": "Quiet Light",
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.panel.defaultLocation": "right",
     "workbench.preferredDarkColorTheme": "Quiet Light",
     "workbench.preferredHighContrastColorTheme": "Quiet Light",
     "workbench.preferredLightColorTheme": "Quiet Light",
@@ -334,6 +345,4 @@
     "remote.SSH.remotePlatform": {
         "10.200.20.211": "linux"
     },
-    "window.zoomLevel": 3,
-    "workbench.panel.defaultLocation": "right",
 }

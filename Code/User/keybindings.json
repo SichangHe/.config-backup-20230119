@@ -167,17 +167,7 @@
         "when": "editorTextFocus && !dance.isRecording && !markersNavigationVisible && dance.mode == 'normal'"
     },
     {
-        "key": "cmd+b",
-        "command": "extension.multiCommand.execute",
-        "args": {
-            "sequence": [
-                "workbench.action.toggleActivityBarVisibility",
-                "workbench.action.toggleSidebarVisibility"
-            ]
-        }
+        "key": "alt+cmd+b",
+        "command": "workbench.action.toggleActivityBarVisibility",
     },
-    {
-        "key": "cmd+b",
-        "command": "-workbench.action.toggleSidebarVisibility"
-    }
 ]
