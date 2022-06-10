@@ -18,6 +18,7 @@
         "Bendixson",
         "Bendixson's",
         "biconditional",
+        "Bigr",
         "bijective",
         "binormal",
         "bivariate",
@@ -34,10 +35,12 @@
         "downarrow",
         "dukekunshan",
         "eigen",
+        "Extremum",
         "FOSS",
         "Frobenius",
         "geckodriver",
         "Grobman",
+        "Hammerspoon",
         "heapify",
         "Heiles",
         "Henon",
@@ -73,6 +76,7 @@
         "mathbb",
         "mathbf",
         "mathcal",
+        "Mathematica",
         "mathjax",
         "mathrm",
         "mathscr",
@@ -90,6 +94,7 @@
         "Pacman",
         "pagebreak",
         "pagerank",
+        "Pandoc",
         "pbcopy",
         "pmatrix",
         "polytope",
@@ -106,6 +111,8 @@
         "Ricatti",
         "Riesz",
         "Rightarrow",
+        "rlang",
+        "Rolle",
         "scrapy",
         "Seidel",
         "semidefinite",
@@ -117,6 +124,7 @@
         "struct",
         "submultiplicative",
         "subseteq",
+        "Sucklessfy",
         "supremum",
         "surjective",
         "Tabnine",
@@ -126,8 +134,10 @@
         "Traceback",
         "transversality",
         "uncountably",
+        "unshift",
         "varepsilon",
         "waitlist",
+        "WLOG",
         "Wronskian"
     ],
     // editor
@@ -142,6 +152,9 @@
     "editor.formatOnSave": true,
     "editor.glyphMargin": false,
     "editor.hover.delay": 0,
+    "editor.inlayHints.enabled": "onUnlessPressed",
+    "editor.inlayHints.fontFamily": "JetBrains Mono NL Thin Italic",
+    "editor.inlayHints.fontSize": 14,
     "editor.lineDecorationsWidth": 0,
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
@@ -271,7 +284,16 @@
     // rust-analyzer
     "rust-analyzer.cargo.allFeatures": true,
     "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": true,
     "rust-analyzer.inlayHints.lifetimeElisionHints": "skip_trivial",
+    "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
+    "rust-analyzer.inlayHints.maxLength": 5,
+    "rust-analyzer.lens.references.adt.enable": true,
+    "rust-analyzer.lens.references.enumVariant.enable": true,
+    "rust-analyzer.lens.references.method.enable": true,
+    "rust-analyzer.lens.references.trait.enable": true,
+    "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
     "search.exclude": {
         "**/.git": true,
         "**.pdf": true,
@@ -316,7 +338,14 @@
     "workbench.preferredDarkColorTheme": "Quiet Light",
     "workbench.preferredHighContrastColorTheme": "Quiet Light",
     "workbench.preferredLightColorTheme": "Quiet Light",
+    "workbench.startupEditor": "none",
     // language
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -330,19 +359,20 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[markdown]": {
-        "editor.quickSuggestions": true,
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        },
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
     "[rust]": {
-        "editor.defaultFormatter": "matklad.rust-analyzer"
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
     },
     "[fish]": {
         "editor.defaultFormatter": "zgm.vscode-fish"
-    },
-    "remote.SSH.remotePlatform": {
-        "10.200.20.211": "linux"
     },
 }
