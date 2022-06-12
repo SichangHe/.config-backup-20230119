@@ -1,4 +1,5 @@
 set clipboard=unnamed
+lang en_US.UTF-8
 if exists('g:vscode')
     " VSCode extension
 else
