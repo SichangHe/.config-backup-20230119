@@ -24,8 +24,10 @@
         "bivariate",
         "bmatrix",
         "Cacher",
+        "cheatsheet",
         "Chebyshev",
         "chrono",
+        "clippy",
         "coalbedo",
         "codomain",
         "Communitative",
@@ -71,6 +73,7 @@
         "longwave",
         "Lyapunov",
         "Lyapunov's",
+        "Maclaurin",
         "mapsto",
         "marp",
         "mathbb",
@@ -87,10 +90,12 @@
         "Neumann",
         "nolog",
         "nonnegativity",
+        "openconnect",
         "orthogonalization",
         "orthogonalize",
         "overdamped",
         "overfitting",
+        "overrightarrow",
         "Pacman",
         "pagebreak",
         "pagerank",
@@ -104,9 +109,12 @@
         "println",
         "printpdf",
         "pseudocode",
+        "pycache",
         "pyfunction",
+        "Pylance",
         "pymodule",
         "Raphson",
+        "rcases",
         "reqwest",
         "Ricatti",
         "Riesz",
@@ -119,6 +127,8 @@
         "Sichang",
         "Sīchàng",
         "sichanghe",
+        "SIGTERM",
+        "solargraph",
         "stackrel",
         "Steinitz",
         "struct",
@@ -128,6 +138,7 @@
         "supremum",
         "surjective",
         "Tabnine",
+        "textblob",
         "tlmgr",
         "Tollendo",
         "Tollens",
@@ -136,10 +147,13 @@
         "uncountably",
         "unshift",
         "varepsilon",
+        "vmatrix",
         "waitlist",
         "WLOG",
         "Wronskian"
     ],
+    // deno
+    "deno.enable": true,
     // editor
     "editor.acceptSuggestionOnEnter": "off",
     "editor.accessibilitySupport": "off",
@@ -162,6 +176,10 @@
     "editor.suggestSelection": "first",
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
+    "emmet.includeLanguages": {
+        "html.erb": "html",
+        "erb": "html"
+    },
     // errorLens
     "errorLens.enabledDiagnosticLevels": [
         "error",
@@ -169,6 +187,9 @@
     ],
     "errorLens.messageBackgroundMode": "none",
     // files
+    "files.associations": {
+        "*.erb": "erb"
+    },
     "files.autoSave": "onFocusChange",
     "files.exclude": {
         "**/.classpath": true,
@@ -194,6 +215,11 @@
     "gitlens.defaultDateFormat": "YYYY.MM.DD",
     "gitlens.defaultDateShortFormat": "MM.DD",
     "gitlens.statusBar.enabled": false,
+    // go
+    "go.autocompleteUnimportedPackages": true,
+    "go.survey.prompt": false,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.useLanguageServer": false,
     "grammarly.autoActivate": false,
     // java/julia
     "java.format.settings.url": "/Users/sichanghe/Documents/Java files/newLineBrace.xml",
@@ -280,7 +306,12 @@
         "--no-pretty",
         "--allow-redefinition"
     ],
+    "redhat.telemetry.enabled": false,
     "remote.SSH.useLocalServer": false,
+    // ruby
+    "ruby.codeCompletion": "rcodetools",
+    "ruby.intellisense": "rubyLocate",
+    "ruby.useLanguageServer": true,
     // rust-analyzer
     "rust-analyzer.cargo.allFeatures": true,
     "rust-analyzer.checkOnSave.command": "clippy",
@@ -304,6 +335,25 @@
     },
     "search.seedWithNearestWord": true,
     "security.workspace.trust.untrustedFiles": "open",
+    // solargraph
+    "solargraph.commandPath": "/opt/homebrew/lib/ruby/gems/3.1.0/bin/solargraph",
+    "solargraph.diagnostics": true,
+    "solargraph.formatting": true,
+    // tabnine
+    "tabnine.disableLineRegex": [
+        "→",
+        "⇒",
+        "⇔",
+        "∞",
+        "∀",
+        "\\lim",
+        "\\sum",
+        "∃",
+        "\\in",
+        "\\frac",
+        "\\displaystyle",
+        "∫"
+    ],
     "tabnine.experimentalAutoImports": true,
     // terminal
     "terminal.explorerKind": "external",
@@ -319,8 +369,11 @@
     "terminal.integrated.fontFamily": "JetBrains Mono",
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.inheritEnv": false,
+    // vscode-neovim
+    "vscode-neovim.mouseSelectionStartVisualMode": true,
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    // window
     "window.title": "${dirty}${activeEditorLong} ㅤ ㅤ ${rootName}",
     "window.zoomLevel": 3,
     // workbench
@@ -368,6 +421,9 @@
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
+    },
+    "[ruby]": {
+        "editor.defaultFormatter": "castwide.solargraph"
     },
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer"

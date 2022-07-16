@@ -170,4 +170,9 @@
         "key": "alt+cmd+b",
         "command": "workbench.action.toggleActivityBarVisibility",
     },
+    {
+        "key": "cmd+.",
+        "command": "keyboard-quickfix.openQuickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
 ]

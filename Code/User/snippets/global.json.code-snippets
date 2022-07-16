@@ -51,5 +51,9 @@
 	"quotes": {
 		"prefix": "quote",
 		"body": "“$0”"
+	},
+	"enter": {
+		"prefix": "enter",
+		"body": "⏎"
 	}
 }
