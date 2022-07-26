@@ -28,7 +28,7 @@ end
 #! }
 
 # starship
-starship init fish | source
+# starship init fish | source
 
 # default editor
 set -gx EDITOR nvim
