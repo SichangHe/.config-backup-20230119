@@ -65,6 +65,15 @@
 		],
 		"description": "create left right braces pair"
 	},
+	"big parenthesis": {
+		"prefix": "Bigrp",
+		"body": [
+			"\\Bigr(",
+			"    $0",
+			"\\Bigr)"
+		],
+		"description": "create big parenthesis pair"
+	},
 	"fraction": {
 		"prefix": "frac",
 		"body": "\\frac{$0}{}",
@@ -101,6 +110,10 @@
 	},
 	"left and right angle": {
 		"prefix": "angle",
-		"body": "\\langle $0\\rangle"
+		"body": "\\langle $0 \\rangle"
+	},
+	"limit": {
+		"prefix": "lim",
+		"body": "\\lim_{$0 → ∞}"
 	}
 }

@@ -32,3 +32,6 @@ end
 
 # default editor
 set -gx EDITOR nvim
+
+# white theme for bat
+set -gx BAT_THEME GitHub
