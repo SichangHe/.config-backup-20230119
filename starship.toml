@@ -4,17 +4,19 @@ add_newline = false
 #format = "$character[▔🮂🮃▀🮄🮅🮆█▓▒░  ](#ff80ff)$directory$cmd_duration$line_break "
 #format = "[  ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔](#ff80ff)[▔🮂🮃▀🮄🮅🮆█▓▒░  ](#ff80ff)$directory$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$cmd_duration$character$line_break "
 #format = "[  ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔](#ff00ff)$directory$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$cmd_duration$character$line_break "
-format = "$fill$directory$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$cmd_duration$character$line_break \b"
+# format = "$fill$directory$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$cmd_duration$character$line_break \b"
 # [  ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔](#000000)
+format = "$character "
+right_format = "$directory$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$cmd_duration"
 
 [character]
-error_symbol = "[⨯](bold red)"
-success_symbol = "[✓](bold green)"
+error_symbol = "[❯](bold red)"
+success_symbol = "[❯](bold green)"
 format = "$symbol"
 
 [directory]
 truncation_length = 5
-style = "#000000"
+style = "purple"
 #format = "[$path]($style)[$lock_symbol]($lock_style) "
 
 #format = "[$path](#ff00ff)($style)[▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔🮂🮃▀🮄🮅🮆█▇▆▅▄▃▂▁▂▃▄▅▆▇█🮆🮅🮄▀🮃🮂▔](#ff80ff)[$lock_symbol]($lock_style) "
@@ -24,7 +26,7 @@ style = "#000000"
 
 [git_branch]
 format = " [$symbol$branch]($style) "
-style = "bold yellow"
+style = "bold #FFA500" # orange
 
 [git_commit]
 commit_hash_length = 8
@@ -48,8 +50,9 @@ style = "bright-gray"
 format = "$all_status$ahead_behind"
 
 [cmd_duration]
-#min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
-format = "[≈$duration]($style) "
+min_time = 50  # Show command duration over 50 milliseconds
+style = "bold blue"
+format = "[$duration]($style) "
 
 [fill]
 symbol = "▔"

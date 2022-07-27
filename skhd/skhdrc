@@ -1,20 +1,25 @@
 # focus window
-#hyper - j : if test (yabai -m config --space mouse layout) = "bsp"; \
-#                yabai -m window --focus prev; \
-#            else; \
-#                if test (yabai -m config --space mouse layout) = "float"; \
-#                    yabai -m config --space mouse layout stack; \
-#                end; \
-#                yabai -m window --focus stack.prev; \
-#            end
-#hyper - k : if test (yabai -m config --space mouse layout) = "bsp"; \
-#                yabai -m window --focus next; \
-#            else; \
-#                if test (yabai -m config --space mouse layout) = "float"; \
-#                    yabai -m config --space mouse layout stack; \
-#                end; \
-#                yabai -m window --focus stack.next; \
-#            end
+hyper - j : \
+if test (yabai -m config --space mouse layout) = "bsp"; \
+    yabai -m window --focus prev; \
+else; \
+    if test (yabai -m config --space mouse layout) = "float"; \
+        yabai -m config --space mouse layout stack; \
+    end; \
+    yabai -m window --focus stack.prev; \
+end
+
+hyper - k : \
+if test (yabai -m config --space mouse layout) = "bsp"; \
+    yabai -m window --focus next; \
+else; \
+    if test (yabai -m config --space mouse layout) = "float"; \
+        yabai -m config --space mouse layout stack; \
+    end; \
+    yabai -m window --focus stack.next; \
+end
+
+hyper - h : yabai -m window --focus recent
 
 # focus display
 hyper - n : yabai -m display 1 --focus 1
@@ -69,11 +74,12 @@ hyper - s : yabai -m config --space mouse layout stack
 hyper - d : yabai -m config --space mouse layout float
 
 # mouse follow
-shift + alt - f : if test (yabai -m config mouse_follows_focus) = "off"; \
-                yabai -m config mouse_follows_focus on && osascript -e 'display notification "mouse follows focus: ON" with title "yabai"'; \
-            else; \
-                yabai -m config mouse_follows_focus off && osascript -e 'display notification "mouse follows focus: OFF" with title "yabai"'; \
-            end
+shift + alt - f : \
+if test (yabai -m config mouse_follows_focus) = "off"; \
+    yabai -m config mouse_follows_focus on && osascript -e 'display notification "mouse follows focus: ON" with title "yabai"'; \
+else; \
+    yabai -m config mouse_follows_focus off && osascript -e 'display notification "mouse follows focus: OFF" with title "yabai"'; \
+end
 
 # Resize windows
 #alt - h : yabai -m window --resize left:-50:0; \
