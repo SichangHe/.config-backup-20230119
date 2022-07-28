@@ -300,7 +300,6 @@
     // prettier
     "prettier.tabWidth": 4,
     // python
-    "pylance.insidersChannel": "daily",
     "python.analysis.completeFunctionParens": true,
     "python.analysis.diagnosticMode": "workspace",
     "python.analysis.inlayHints.functionReturnTypes": true,
