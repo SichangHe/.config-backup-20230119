@@ -1,5 +1,11 @@
-function vscode_exists()
+local path_here = debug.getinfo(1).source:match("@?(.*/)")
+
+local function vscode_exists()
     return vim.fn.exists('g:vscode') == 1
+end
+
+local function source(path)
+    vim.cmd(string.format("source %s/%s", path_here, path))
 end
 
 require('custom.general_options')
@@ -12,4 +18,6 @@ else
     require('custom.keymaps')
     set_options()
     set_keymap()
+
+    source("one_half_light.vim")
 end
