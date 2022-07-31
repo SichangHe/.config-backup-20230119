@@ -13,4 +13,3 @@ else
     set_options()
     set_keymap()
 end
-

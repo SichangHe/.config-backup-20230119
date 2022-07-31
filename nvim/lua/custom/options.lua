@@ -3,9 +3,11 @@ function set_options()
     set.cursorline = true
     set.breakindent = true
     set.confirm = true
+    set.endofline = false
     set.expandtab = true
+    set.fixendofline = false
     set.list = true
-    set.listchars = {multispace = '╎   ', trail = '·'}
+    set.listchars = { multispace = '╎   ', trail = '·' }
     set.mouse = 'a'
     set.number = true
     set.relativenumber = true
@@ -15,4 +17,3 @@ function set_options()
     set.splitright = true
     set.tabstop = 4
 end
-

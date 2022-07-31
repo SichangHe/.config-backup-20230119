@@ -5,4 +5,3 @@ function set_general_options()
     set.clipboard = 'unnamed'
     set.virtualedit = 'block'
 end
-

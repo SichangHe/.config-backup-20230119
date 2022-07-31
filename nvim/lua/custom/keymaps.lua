@@ -3,4 +3,3 @@ function set_keymap()
     set('i', 'jk', '<Esc>')
     set('i', 'kj', '<Esc>')
 end
-
