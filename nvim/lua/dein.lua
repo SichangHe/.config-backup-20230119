@@ -1,11 +1,10 @@
 local set = vim.opt
 local fn = vim.fn
-local call = fn.call
-local add = function(target) call(fn['dein#add'], { target }) end
-local begin = function(target) call(fn['dein#begin'], { target }) end
-local check_install = function() call(fn['dein#check_install'], {}) end
-local install = function() call(fn['dein#install'], {}) end
-local end_ = function() call(fn['dein#end'], {}) end
+local add = fn['dein#add']
+local begin = fn['dein#begin']
+local check_install = fn['dein#check_install']
+local install = fn['dein#install']
+local end_ = fn['dein#end']
 
 function activate_dein(path)
     -- Required:
