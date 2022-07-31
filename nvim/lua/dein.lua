@@ -18,7 +18,7 @@ function activate_dein(path)
     begin(cache_path)
 
     -- Let dein manage dein
-    add('dein')
+    add(dein_path)
 
     -- Required:
     end_()
