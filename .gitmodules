@@ -1,0 +1,3 @@
+[submodule "nvim/dein"]
+	path = nvim/dein
+	url = git@github.com:Shougo/dein.vim.git

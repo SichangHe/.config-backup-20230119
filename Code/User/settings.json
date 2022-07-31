@@ -244,6 +244,7 @@
     "latex-workshop.view.pdf.viewer": "external",
     "ligaturesLimited.selectionMode": "selection",
     "liveServer.settings.donotVerifyTags": true,
+    "Lua.telemetry.enable": false,
     // markdown
     "markdown.extension.list.indentationSize": "inherit",
     "markdown.marp.enableHtml": true,
@@ -396,6 +397,7 @@
     "workbench.panel.defaultLocation": "right",
     "workbench.preferredDarkColorTheme": "Quiet Light",
     "workbench.preferredHighContrastColorTheme": "Quiet Light",
+    "workbench.preferredHighContrastLightColorTheme": "Quiet Light",
     "workbench.preferredLightColorTheme": "Quiet Light",
     "workbench.startupEditor": "none",
     // language

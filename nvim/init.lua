@@ -16,8 +16,11 @@ if vscode_exists() then
 else
     require('custom.options')
     require('custom.keymaps')
+    require('dein')
+
     set_options()
     set_keymap()
 
     source("one_half_light.vim")
+    activate_dein(path_here)
 end
