@@ -9,16 +9,16 @@ local function use(module)
 end
 
 function LoadAllConfig()
-    use('custom.general_options')
-    use('custom.general_keymaps')
+    use('general_options')
+    use('general_keymaps')
     GeneralOptions.set()
     GeneralKeymaps.set()
 
     if vscode_exists then
         -- Running inside vscode
     else
-        use('custom.options')
-        use('custom.keymaps')
+        use('options')
+        use('keymaps')
         use('dein')
 
         Options.set()
