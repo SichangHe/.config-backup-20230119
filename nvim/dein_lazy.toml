@@ -3,3 +3,4 @@ repo = 'fannheyward/coc-markdownlint'
 name = 'markdownlint'
 build = 'yarn'
 on_ft = 'markdown'
+hook_add = ":lua vim.keymap.set('n', '<Space>f', ':CocCommand markdownlint.fixAll<CR>')"
