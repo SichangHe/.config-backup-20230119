@@ -1,5 +1,8 @@
+GeneralKeymaps = {}
 local set = vim.keymap.set
 
-function SetGeneralKeymaps()
+function GeneralKeymaps.set()
     set('n', '<Space><Space>', ':noh<CR>')
 end
+
+return GeneralKeymaps

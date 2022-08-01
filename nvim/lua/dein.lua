@@ -1,3 +1,4 @@
+Dein = {}
 local set = vim.opt
 local fn = vim.fn
 local add = fn['dein#add']
@@ -7,7 +8,7 @@ local install = fn['dein#install']
 local load_toml = fn['dein#load_toml']
 local end_ = fn['dein#end']
 
-function ActivateDein()
+function Dein.activate()
     local dein_path = NvimConfigPath .. "/dein"
     set.runtimepath:append(dein_path)
 
@@ -22,3 +23,5 @@ function ActivateDein()
 
     if check_install() == 1 then install() end
 end
+
+return Dein

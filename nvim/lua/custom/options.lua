@@ -1,4 +1,6 @@
-function SetOptions()
+Options = {}
+
+function Options.set()
     local set = vim.opt
     set.cursorline = true
     set.breakindent = true
@@ -17,3 +19,5 @@ function SetOptions()
     set.splitright = true
     set.tabstop = 4
 end
+
+return Options
