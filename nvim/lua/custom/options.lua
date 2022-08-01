@@ -1,7 +1,7 @@
 Options = {}
+local set = vim.opt
 
 function Options.set()
-    local set = vim.opt
     set.cursorline = true
     set.breakindent = true
     set.confirm = true
@@ -9,7 +9,11 @@ function Options.set()
     set.expandtab = true
     set.fixendofline = false
     set.list = true
-    set.listchars = { multispace = '╎   ', trail = '·' }
+    set.listchars = {
+        tab = '- ',
+        multispace = '┊   ',
+        trail = '·'
+    }
     set.mouse = 'a'
     set.number = true
     set.relativenumber = true

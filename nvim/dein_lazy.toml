@@ -1,3 +1,4 @@
 [[plugins]]
 repo = 'tjdevries/nlua.nvim'
 name = 'nlua'
+on_ft = 'lua'
