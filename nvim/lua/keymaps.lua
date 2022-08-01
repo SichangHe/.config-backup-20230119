@@ -9,6 +9,7 @@ function Keymaps.set()
     set('i', '<C-J>', function() return suggestion_show() and '<C-J>' or '<C-N>' end, { expr = true })
     set('i', '<C-K>', function() return suggestion_show() and '<C-K>' or '<C-P>' end, { expr = true })
     set('n', '<Space>w', '<C-W>')
+    set('n', '<Space>p', ':CocList commands<CR>')
 end
 
 return Keymaps

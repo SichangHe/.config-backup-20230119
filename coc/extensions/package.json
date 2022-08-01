@@ -1,5 +1,3 @@
 {
-  "dependencies": {
-    "coc-markdownlint": ">=1.12.6"
-  }
+  "dependencies": {}
 }

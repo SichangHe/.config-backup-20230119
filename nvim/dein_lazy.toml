@@ -1,1 +1,5 @@
-
+[[plugins]]
+repo = 'fannheyward/coc-markdownlint'
+name = 'markdownlint'
+build = 'yarn'
+on_ft = 'markdown'

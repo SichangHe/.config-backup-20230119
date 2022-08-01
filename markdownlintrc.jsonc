@@ -1,4 +1,3 @@
-// ln -s ~/.config/markdownlintrc.jsonc ~/.markdownlintrc
 {
     "default": true,
     "single-title": false,

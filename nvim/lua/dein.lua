@@ -20,10 +20,10 @@ function Dein.activate()
         local cache_path = HomeDir .. "/.local/share/dein"
         begin(cache_path)
         add(dein_path)
-        local toml_path = NvimConfigPath .. "dein.toml"
-        load_toml(toml_path)
         local lazy_toml_path = NvimConfigPath .. "dein_lazy.toml"
         load_toml(lazy_toml_path, { lazy = 1 })
+        local toml_path = NvimConfigPath .. "dein.toml"
+        load_toml(toml_path)
         end_()
         save_state()
     end
