@@ -141,30 +141,15 @@
     },
     {
         "command": "vscode-neovim.compositeEscape1",
-        "key": "j",
-        "when": "neovim.mode == insert && editorTextFocus",
-        "args": "j"
-    },
-    {
-        "command": "vscode-neovim.compositeEscape2",
         "key": "k",
         "when": "neovim.mode == insert && editorTextFocus",
         "args": "k"
     },
     {
-        "key": "ctrl+c",
-        "command": "dance.modes.set.normal",
-        "when": "editorTextFocus && dance.mode == 'insert'"
-    },
-    {
-        "key": "ctrl+c",
-        "command": "dance.cancel",
-        "when": "editorTextFocus && dance.mode == 'input'"
-    },
-    {
-        "key": "ctrl+c",
-        "command": "dance.cancel",
-        "when": "editorTextFocus && !dance.isRecording && !markersNavigationVisible && dance.mode == 'normal'"
+        "command": "vscode-neovim.compositeEscape2",
+        "key": "j",
+        "when": "neovim.mode == insert && editorTextFocus",
+        "args": "j"
     },
     {
         "key": "alt+cmd+b",

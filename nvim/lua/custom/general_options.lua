@@ -1,4 +1,4 @@
-function set_general_options()
+function SetGeneralOptions()
     vim.cmd("lang en_US.UTF-8")
 
     local set = vim.opt

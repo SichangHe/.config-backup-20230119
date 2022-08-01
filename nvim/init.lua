@@ -1,20 +1,26 @@
-local path_here = debug.getinfo(1).source:match("@?(.*/)")
+NvimConfigPath = debug.getinfo(1).source:match("@?(.*/)")
 local vscode_exists = vim.fn.exists('g:vscode') == 1
-local source = function(path) vim.cmd(string.format("source %s/%s", path_here, path)) end
+local source = function(path) vim.cmd(string.format("source %s/%s", NvimConfigPath, path)) end
 
-require('custom.general_options')
-set_general_options()
+function LoadAllConfig()
+    require('custom.general_options')
+    require('custom.general_keymaps')
+    SetGeneralOptions()
+    SetGeneralKeymaps()
 
-if vscode_exists then
-    -- Running inside vscode
-else
-    require('custom.options')
-    require('custom.keymaps')
-    require('dein')
+    if vscode_exists then
+        -- Running inside vscode
+    else
+        require('custom.options')
+        require('custom.keymaps')
+        require('dein')
 
-    set_options()
-    set_keymap()
+        SetOptions()
+        SetKeymaps()
 
-    source("one_half_light.vim")
-    activate_dein(path_here)
+        source("one_half_light.vim")
+        ActivateDein()
+    end
 end
+
+LoadAllConfig()

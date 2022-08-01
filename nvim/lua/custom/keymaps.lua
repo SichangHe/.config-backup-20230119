@@ -1,9 +1,9 @@
 local pumvisible = function() return vim.fn.pumvisible == 1 end
+local set = vim.keymap.set
 
-function set_keymap()
-    local set = vim.keymap.set
+function SetKeymaps()
     set('i', 'jk', '<Esc>')
     set('i', 'kj', '<Esc>')
-    set('i', '<C-J>', function() if pumvisible() then return '<C-J>' else return '<C-N>' end end, { expr = true })
-    set('i', '<C-K>', function() if pumvisible() then return '<C-K>' else return '<C-P>' end end, { expr = true })
+    set('i', '<C-J>', function() return pumvisible() and '<C-J>' or '<C-N>' end, { expr = true })
+    set('i', '<C-K>', function() return pumvisible() and '<C-K>' or '<C-P>' end, { expr = true })
 end

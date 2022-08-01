@@ -7,16 +7,16 @@ local install = fn['dein#install']
 local load_toml = fn['dein#load_toml']
 local end_ = fn['dein#end']
 
-function activate_dein(path)
-    local dein_path = string.format("%s/dein", path)
+function ActivateDein()
+    local dein_path = NvimConfigPath .. "/dein"
     set.runtimepath:append(dein_path)
 
-    local cache_path = string.format("%s/../../.local/share/dein", path)
+    local cache_path = NvimConfigPath .. "/../../.local/share/dein"
     begin(cache_path)
     add(dein_path)
-    local toml_path = string.format("%s/dein.toml", path)
+    local toml_path = NvimConfigPath .. "/dein.toml"
     load_toml(toml_path)
-    local lazy_toml_path = string.format("%s/dein_lazy.toml", path)
+    local lazy_toml_path = NvimConfigPath .. "/dein_lazy.toml"
     load_toml(lazy_toml_path, { lazy = 1 })
     end_()
 

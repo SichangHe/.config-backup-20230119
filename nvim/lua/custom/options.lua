@@ -1,4 +1,4 @@
-function set_options()
+function SetOptions()
     local set = vim.opt
     set.cursorline = true
     set.breakindent = true
