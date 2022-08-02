@@ -1,6 +1,6 @@
-function run_command(command)
+function run_command(command, pattern)
     handle = io.popen(command)
-    result = handle:read("*a")
+    result = handle:read(pattern or "*a")
     handle:close()
     return result
 end
@@ -25,16 +25,37 @@ function get_next()
     end
 end
 
-ids = run_command("yabai -m query --windows --space mouse | jq '.[].id'")
-id = tonumber(run_command("yabai -m query --windows --window mouse | jq '.id'"))
+function cycle()
+    ids = run_command("yabai -m query --windows --space mouse | jq '.[].id'")
+    id = tonumber(run_command("yabai -m query --windows --window mouse | jq '.id'"))
 
-id_list = {}
-for now in string.gmatch(ids, "%w+") do
-    table.insert(id_list, tonumber(now))
+    id_list = {}
+    for now in string.gmatch(ids, "%w+") do
+        table.insert(id_list, tonumber(now))
+    end
+    table.sort(id_list)
+
+    target = args[1] == 'next' and get_next() or get_last()
+    return run_command("yabai -m window --focus " .. target)
 end
-table.sort(id_list)
+
+function info()
+    apps = run_command("yabai -m query --windows --space mouse | jq '.[].app'")
+    app_str = ''
+    for app in string.gmatch(apps, "\"%w+[%s\"]") do
+        app_str = app_str .. string.match(app, "%w+") .. ' '
+    end
+    space_id = run_command("yabai -m query --spaces --space mouse | jq '.index'", "*l")
+    window_num = run_command("yabai -m query --windows --space mouse | jq '.[].title' | wc -l", "*l")
+    command = string.format("osascript -e 'display notification \"%s\" with title \"Space %s\" subtitle \"%s windows\"'"
+        , app_str, space_id, window_num)
+    return run_command(command)
+end
 
 args = { ... }
-target = args[1] == 'next' and get_next() or get_last()
-
-return run_command("yabai -m window --focus " .. target)
+if args[1] == 'next' or args[1] == 'last' then
+    return cycle()
+else if args[1] == 'info' then
+        return info()
+    end
+end
