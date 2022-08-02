@@ -1,6 +1,18 @@
 [[plugins]]
+repo = 'neoclide/coc-json'
+name = 'json'
+build = 'yarn'
+on_ft = 'json'
+
+[[plugins]]
 repo = 'fannheyward/coc-markdownlint'
 name = 'markdownlint'
 build = 'yarn'
 on_ft = 'markdown'
 hook_add = ":lua Keymaps.format = function() vim.cmd('CocCommand markdownlint.fixAll') end"
+
+[[plugins]]
+repo = 'neoclide/coc-solargraph'
+name = 'solargraph'
+build = 'yarn'
+on_ft = ['ruby', 'eruby']
