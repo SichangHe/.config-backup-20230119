@@ -1,24 +1,6 @@
 # focus window
-hyper - j : \
-if test (yabai -m config --space mouse layout) = "bsp"; \
-    yabai -m window --focus prev; \
-else; \
-    if test (yabai -m config --space mouse layout) = "float"; \
-        yabai -m config --space mouse layout stack; \
-    end; \
-    yabai -m window --focus stack.prev; \
-end
-
-hyper - k : \
-if test (yabai -m config --space mouse layout) = "bsp"; \
-    yabai -m window --focus next; \
-else; \
-    if test (yabai -m config --space mouse layout) = "float"; \
-        yabai -m config --space mouse layout stack; \
-    end; \
-    yabai -m window --focus stack.next; \
-end
-
+hyper - j : lua ~/.config/helper.lua/yabai.lua last
+hyper - k : lua ~/.config/helper.lua/yabai.lua next
 hyper - h : yabai -m window --focus recent
 
 # focus display
