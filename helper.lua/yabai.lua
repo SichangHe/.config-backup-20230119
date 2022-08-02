@@ -1,33 +1,32 @@
+function run_command(command)
+    handle = io.popen(command)
+    result = handle:read("*a")
+    handle:close()
+    return result
+end
+
 function get_last()
     if id == id_list[1] then
-        last = id_list[#id_list]
-    else
-        for _, now in ipairs(id_list) do
-            if now == id then break end
-            last = now
-        end
+        return id_list[#id_list]
+    end
+    for _, now in ipairs(id_list) do
+        if now == id then break end
+        last = now
     end
     return last
 end
 
 function get_next()
     if id == id_list[#id_list] then
-        next_ = id_list[1]
-    else
-        for i, now in ipairs(id_list) do
-            if now == id then next_ = id_list[i + 1] break end
-        end
+        return id_list[1]
     end
-    return next_
+    for i, now in ipairs(id_list) do
+        if now == id then return id_list[i + 1] end
+    end
 end
 
-handle = io.popen("yabai -m query --windows --space mouse | jq '.[].id'")
-ids = handle:read("*a")
-handle:close()
-
-handle = io.popen("yabai -m query --windows --window mouse | jq '.id'")
-id = tonumber(handle:read("l"))
-handle:close()
+ids = run_command("yabai -m query --windows --space mouse | jq '.[].id'")
+id = tonumber(run_command("yabai -m query --windows --window mouse | jq '.id'"))
 
 id_list = {}
 for now in string.gmatch(ids, "%w+") do
@@ -38,7 +37,4 @@ table.sort(id_list)
 args = { ... }
 target = args[1] == 'next' and get_next() or get_last()
 
-handle = io.popen("yabai -m window --focus " .. target)
-result = handle:read("*a")
-handle:close()
-return result
+return run_command("yabai -m window --focus " .. target)
