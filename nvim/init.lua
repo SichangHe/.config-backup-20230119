@@ -21,17 +21,15 @@ function LoadAllConfig()
         use('options')
         use('keymaps')
         use('dein')
-        -- use('lspconfig')
+
+        Options.set()
+        Keymaps.set()
 
         Dein.activate()
         if fn['coc#math#min'] then
             use('coc')
             Coc.setup()
         end
-
-        Options.set()
-        Keymaps.set()
-        -- LspConfig.default()
 
         source("one_half_light.vim")
     end
