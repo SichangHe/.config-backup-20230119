@@ -1,6 +1,7 @@
 NvimConfigPath = debug.getinfo(1).source:match("@?(.*/)")
 HomeDir = os.getenv('HOME')
-local vscode_exists = vim.fn.exists('g:vscode') == 1
+local fn = vim.fn
+local vscode_exists = fn.exists('g:vscode') == 1
 local source = function(path) vim.cmd("source " .. NvimConfigPath .. path) end
 
 local function use(module)
@@ -20,12 +21,19 @@ function LoadAllConfig()
         use('options')
         use('keymaps')
         use('dein')
+        -- use('lspconfig')
+
+        Dein.activate()
+        if fn['coc#math#min'] then
+            use('coc')
+            Coc.setup()
+        end
 
         Options.set()
         Keymaps.set()
+        -- LspConfig.default()
 
         source("one_half_light.vim")
-        Dein.activate()
     end
 end
 

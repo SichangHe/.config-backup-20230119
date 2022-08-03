@@ -12,7 +12,7 @@ function Options.set()
     set.listchars = {
         tab = '- ',
         multispace = '┊   ',
-        trail = '·'
+        trail = '·',
     }
     set.mouse = 'a'
     set.number = true

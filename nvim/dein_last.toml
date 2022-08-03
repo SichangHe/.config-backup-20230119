@@ -1,0 +1,6 @@
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+name = 'coc'
+merged = 0
+rev = 'release'
+build = 'yarn'
