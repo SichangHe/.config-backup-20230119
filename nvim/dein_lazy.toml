@@ -9,7 +9,6 @@ repo = 'fannheyward/coc-markdownlint'
 name = 'markdownlint'
 build = 'yarn'
 on_ft = 'markdown'
-hook_add = ":lua Keymaps.format = function() vim.cmd('CocCommand markdownlint.fixAll') end"
 
 [[plugins]]
 repo = 'neoclide/coc-solargraph'
