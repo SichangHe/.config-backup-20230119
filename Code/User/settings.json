@@ -129,6 +129,7 @@
         "Rightarrow",
         "rlang",
         "Rolle",
+        "rubocop",
         "scrapy",
         "Seidel",
         "semidefinite",
@@ -229,6 +230,9 @@
     "go.useCodeSnippetsOnFunctionSuggest": true,
     "go.useLanguageServer": false,
     "grammarly.autoActivate": false,
+    "headwind.classRegex": {
+        "erb": "\\bclass\\s*[=:]\\s*[\\\"\\']([\\._a-zA-Z0-9\\s\\-\\:\\/]+)[\\\"\\']",
+    },
     // java/julia
     "java.format.settings.url": "/Users/sichanghe/Documents/Java files/newLineBrace.xml",
     "java.help.firstView": "gettingStarted",
