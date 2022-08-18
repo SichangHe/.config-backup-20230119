@@ -30,6 +30,7 @@ function LoadAllConfig()
             use('coc')
             Coc.setup()
         end
+        require("nvim-autopairs").setup {}
 
         source("one_half_light.vim")
     end

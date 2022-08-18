@@ -27,7 +27,7 @@ end
 
 function cycle()
     ids = run_command("yabai -m query --windows --space mouse | jq '.[].id'")
-    id = tonumber(run_command("yabai -m query --windows --window mouse | jq '.id'"))
+    id = tonumber(run_command("yabai -m query --windows --window | jq '.id'"))
 
     id_list = {}
     for now in string.gmatch(ids, "%w+") do
