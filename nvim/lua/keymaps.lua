@@ -22,6 +22,7 @@ function Keymaps.set()
     key('n', '<Space>w', '<C-W>')
     key('n', '<Space>f', ':lua Keymaps.format()<CR>')
     key('n', '<Space>s', ':lua Keymaps.format()<CR>:w<CR>')
+    key('n', '<Space>o', ':Files<CR>')
 end
 
 return Keymaps

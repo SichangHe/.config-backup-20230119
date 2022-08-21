@@ -15,3 +15,9 @@ repo = 'neoclide/coc-solargraph'
 name = 'solargraph'
 build = 'yarn'
 on_ft = ['ruby', 'eruby']
+
+[[plugins]]
+repo = 'josa42/coc-lua'
+name = 'lua'
+build = 'yarn'
+on_ft = 'lua'
