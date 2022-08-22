@@ -19,7 +19,11 @@
 #workbench\.parts\.editor>div.content>div.grid-view-container>div>div>div>div.monaco-scrollable-element>div.split-view-container>div>div>div.editor-container>div>div>div.overflow-guard>div.monaco-scrollable-element.editor-scrollable.vs>div.lines-content.monaco-editor-background>div.view-lines.monaco-mouse-cursor-text,
 /* Zen mode */
 #workbench\.parts\.editor>div.content>div.monaco-split-view2.horizontal>div.monaco-scrollable-element>div.split-view-container>div:nth-child(2)>div>div>div>div>div.monaco-scrollable-element>div.split-view-container>div>div>div.editor-container>div>div,
-#workbench\.parts\.editor>div.content>div.monaco-split-view2.horizontal>div.monaco-scrollable-element>div.split-view-container>div:nth-child(2)>div>div>div>div>div.monaco-scrollable-element>div.split-view-container>div>div>div.editor-container>div>div>div.overflow-guard>div.monaco-scrollable-element.editor-scrollable.vs {
+#workbench\.parts\.editor>div.content>div.monaco-split-view2.horizontal>div.monaco-scrollable-element>div.split-view-container>div:nth-child(2)>div>div>div>div>div.monaco-scrollable-element>div.split-view-container>div>div>div.editor-container>div>div>div.overflow-guard>div.monaco-scrollable-element.editor-scrollable.vs,
+/* Diff view*/
+#workbench\.parts\.editor>div.content>div.grid-view-container>div>div>div>div.monaco-scrollable-element>div.split-view-container>div>div>div.editor-container>div>div>div.editor>div,
+#workbench\.parts\.editor>div.content>div.grid-view-container>div>div>div>div.monaco-scrollable-element>div.split-view-container>div>div>div.editor-container>div>div>div.editor>div>div.overflow-guard,
+#workbench\.parts\.editor>div.content>div.grid-view-container>div>div>div>div.monaco-scrollable-element>div.split-view-container>div>div>div.editor-container>div>div>div.editor>div>div.overflow-guard>div.monaco-scrollable-element.editor-scrollable.vs {
     height: 110% !important;
 }
 
@@ -48,4 +52,10 @@ body>div.file-icons-enabled.reduce-motion.monaco-workbench.chromium.nopanel.noau
 #workbench\.parts\.editor>div.content>div.grid-view-container>div>div>div>div.monaco-scrollable-element>div.split-view-container>div>div>div.editor-container>div>div>div.overflow-guard>div.monaco-scrollable-element.editor-scrollable.vs>div.visible.scrollbar.horizontal,
 body>div.file-icons-enabled.reduce-motion.monaco-workbench.chromium.nopanel.noauxiliarybar.maximized.vs.nostatusbar.nosidebar>div.monaco-grid-view>div>div>div.monaco-scrollable-element>div.split-view-container>div:nth-child(3)>div>div>div.monaco-scrollable-element>div.visible.scrollbar {
     bottom: 12px !important;
+}
+
+
+/* # Inlay */
+span.mtk1 {
+    background-color: unset;
 }

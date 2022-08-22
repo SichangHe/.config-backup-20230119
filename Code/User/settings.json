@@ -1,4 +1,5 @@
 {
+    "ActiveFileInStatusBar.fullpath": false,
     "blockman.n04Sub04RightSideBaseOfBlocks": "Rightmost Edge Of Viewport",
     "blockman.n21BorderRadius": 0,
     "breadcrumbs.enabled": false,
@@ -20,6 +21,7 @@
     // cSpell
     "cSpell.userWords": [
         "Abelian",
+        "actix",
         "Alacritty",
         "antiderivative",
         "arctan",
@@ -187,7 +189,7 @@
     "editor.hover.delay": 0,
     "editor.inlayHints.enabled": "onUnlessPressed",
     "editor.inlayHints.fontFamily": "JetBrains Mono NL Thin Italic",
-    "editor.inlayHints.fontSize": 14,
+    "editor.inlayHints.fontSize": 12,
     "editor.lineDecorationsWidth": 0,
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
@@ -397,6 +399,7 @@
     "vscode_custom_css.imports": [
         "file:///Users/sichanghe/.config/Code/User/custom.css"
     ],
+    "vscode_custom_css.statusbar": false,
     // vscode-neovim
     "vscode-neovim.mouseSelectionStartVisualMode": true,
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
