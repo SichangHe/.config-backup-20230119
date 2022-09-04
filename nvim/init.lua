@@ -9,7 +9,7 @@ local function use(module)
     return require(module)
 end
 
-function LoadAllConfig()
+function AllConfig()
     use('general_options')
     use('general_keymaps')
     GeneralOptions.set()
@@ -21,9 +21,11 @@ function LoadAllConfig()
         use('options')
         use('keymaps')
         use('dein')
+        use('autocmd')
 
         Options.set()
         Keymaps.set()
+        Au.set()
 
         Dein.activate()
         if fn['coc#math#min'] then
@@ -36,4 +38,4 @@ function LoadAllConfig()
     end
 end
 
-LoadAllConfig()
+AllConfig()

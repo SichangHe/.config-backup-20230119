@@ -199,6 +199,7 @@
         80
     ],
     "editor.snippetSuggestions": "top",
+    "editor.suggestFontSize": 12,
     "editor.suggestSelection": "first",
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
