@@ -1,3 +1,7 @@
+main {
+    padding: 10px;
+}
+
 :not(span, code, pre) {
     font-family: Times New Roman;
 }

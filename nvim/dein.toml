@@ -5,3 +5,6 @@ hook_add = 'lua require("nvim-autopairs").setup {}'
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 
+[[plugins]]
+repo = 'neoclide/coc-tabnine'
+build = 'yarn'
