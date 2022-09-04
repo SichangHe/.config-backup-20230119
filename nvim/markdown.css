@@ -1,0 +1,16 @@
+:not(span, code, pre) {
+    font-family: Times New Roman;
+}
+
+.author {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+p {
+    padding-bottom: 5px;
+}
+
+.katex {
+    font: normal 1em KaTeX_Main, Times New Roman, serif;
+}

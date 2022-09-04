@@ -1,6 +1,5 @@
 Options = {}
 local set = vim.opt
-local g = vim.g
 
 function Options.set()
     set.cursorline = true
@@ -24,7 +23,7 @@ function Options.set()
     set.spell = true
     set.splitright = true
     set.tabstop = 4
-    g.vim_markdown_folding_disabled = 1
+    set.colorcolumn = "80"
 end
 
 return Options

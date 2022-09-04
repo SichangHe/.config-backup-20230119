@@ -22,6 +22,7 @@ function AllConfig()
         use('keymaps')
         use('dein')
         use('autocmd')
+        use('plugins')
 
         Options.set()
         Keymaps.set()
@@ -32,8 +33,8 @@ function AllConfig()
             use('coc')
             Coc.setup()
         end
-        require("nvim-autopairs").setup {}
 
+        Plugins.set()
         source("one_half_light.vim")
     end
 end
