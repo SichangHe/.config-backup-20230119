@@ -23,6 +23,8 @@ function Keymaps.set()
     key('n', '<Space>f', ':lua Keymaps.format()<CR>')
     key('n', '<Space>s', ':lua Keymaps.format()<CR>:w<CR>')
     key('n', '<Space>o', ':Files<CR>')
+    key('i', '<Space>mm', '$$<Left>')
+    key('i', '<Space>mmm', '$$<CR><CR>$$<Up>')
 end
 
 return Keymaps

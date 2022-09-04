@@ -21,3 +21,8 @@ repo = 'josa42/coc-lua'
 name = 'lua'
 build = 'yarn'
 on_ft = 'lua'
+
+[[plugins]]
+repo = 'preservim/vim-markdown'
+name = 'markdown'
+on_ft = 'markdown'
