@@ -10,6 +10,8 @@ function Plugins.set()
     g.mkdp_auto_close = false
     g.mkdp_port = '7445'
     g.mkdp_markdown_css = NvimConfigPath .. 'markdown.css'
+    g.gitgutter_sign_modified = '█'
+    g.gitgutter_sign_added = '█'
 end
 
 return Plugins

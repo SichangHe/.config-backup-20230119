@@ -27,9 +27,9 @@ function AllConfig()
 
         Options.set()
         Keymaps.set()
-        Au.set()
         Dein.activate()
         Coc.setup()
+        Au.set()
         Plugins.set()
         source("one_half_light.vim")
     end

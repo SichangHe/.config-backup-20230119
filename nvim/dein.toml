@@ -22,3 +22,6 @@ repo = 'sindrets/diffview.nvim'
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
 
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
