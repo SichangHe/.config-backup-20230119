@@ -8,7 +8,7 @@ function Au.set()
   create('CursorHold', {
     command = 'wa'
   }) -- Autosave on no action.
-  create('BufRead', {
+  create('BufAdd', {
       command = 'lua Coc.new_file_open()'
   }) -- Auto reload Coc on new file type.
 end
