@@ -25,6 +25,8 @@ function Keymaps.set()
     key('n', '<Space>o', ':Files<CR>')
     key('i', '<Space>mm', '$$<Left>')
     key('i', '<Space>mmm', '$$<CR><CR>$$<Up>')
+    key('n', '<Space>f', ':Grepper -tool rg -buffer -query<CR>')
+    key('n', '<Space>ff', ':Grepper -tool rg<CR>')
 end
 
 return Keymaps

@@ -8,3 +8,17 @@ repo = 'junegunn/fzf.vim'
 [[plugins]]
 repo = 'neoclide/coc-tabnine'
 build = 'yarn'
+
+[[plugins]]
+repo = 'mhinz/vim-grepper'
+
+# diffview.nvim
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'sindrets/diffview.nvim'
+
+[[plugins]]
+repo = 'kyazdani42/nvim-web-devicons'
+

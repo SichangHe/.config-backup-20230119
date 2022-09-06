@@ -21,19 +21,15 @@ function AllConfig()
         use('options')
         use('keymaps')
         use('dein')
+        use('coc')
         use('autocmd')
         use('plugins')
 
         Options.set()
         Keymaps.set()
         Au.set()
-
         Dein.activate()
-        if fn['coc#math#min'] then
-            use('coc')
-            Coc.setup()
-        end
-
+        Coc.setup()
         Plugins.set()
         source("one_half_light.vim")
     end
