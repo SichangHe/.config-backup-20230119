@@ -26,3 +26,4 @@ CachedConfigurations/
 /*.json
 IndexedDB/
 .com.microsoft.VSCodeInsiders.HVIsIN
+Crashpad/
