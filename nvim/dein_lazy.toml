@@ -32,3 +32,7 @@ repo = 'iamcco/markdown-preview.nvim'
 on_ft = 'markdown'
 build = 'cd app && yarn'
 
+[[plugins]]
+repo = 'fannheyward/coc-pyright'
+on_ft = 'python'
+build = 'yarn'

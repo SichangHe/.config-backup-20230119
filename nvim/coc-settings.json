@@ -1,5 +1,8 @@
 {
     "diagnostic.virtualText": true,
+    "pyright.organizeimports.provider": "isort",
+    "python.formatting.provider": "black",
+    "python.pythonPath": "python3",
     "solargraph.commandPath": "/opt/homebrew/lib/ruby/gems/3.1.0/bin/solargraph",
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
