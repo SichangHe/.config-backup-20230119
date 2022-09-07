@@ -1,6 +1,4 @@
-list-commands-history.json
-list-extensions-history.json
-list-lists-history.json
+list-*-history.json
 lists
 commands
 extensions

@@ -24,6 +24,7 @@ function Options.set()
     set.splitright = true
     set.tabstop = 4
     set.colorcolumn = "80"
+    set.updatetime = 800
 end
 
 return Options
