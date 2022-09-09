@@ -33,13 +33,25 @@ function Coc.setup()
         return fn.CocAction('hasProvider', 'hover') and async('doHover') or 'K'
     end)
     key('i', '<Tab>', function()
-        return pum_visible() and fn['coc#pum#confirm']() or '<Tab>'
+        if pum_visible() then
+            fn['coc#pum#confirm']()
+        else
+            return '<Tab>'
+        end
     end, {expr = true})
     key('i', '<C-j>', function()
-        return pum_visible() and fn['coc#pum#next'](1) or '<C-j>'
+        if pum_visible() then
+            fn['coc#pum#next'](1)
+        else
+            return '<C-j>'
+        end
     end, {expr = true})
     key('i', '<C-k>', function()
-        return pum_visible() and fn['coc#pum#prev'](1) or '<C-k>'
+        if pum_visible() then
+            fn['coc#pum#prev'](1)
+        else
+            return '<C-k>'
+        end
     end, {expr = true})
     create('BufAdd', 'lua Coc.new_file_open()') -- Auto reload Coc on new file type.
     create('CursorHold', "lua Coc.async('highlight')")
