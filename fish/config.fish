@@ -35,3 +35,6 @@ set -gx EDITOR nvim
 
 # white theme for bat
 set -gx BAT_THEME GitHub
+
+# fzf use fd
+set -gx FZF_DEFAULT_COMMAND 'fd -H --strip-cwd-prefix'

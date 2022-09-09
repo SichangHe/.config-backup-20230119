@@ -3,7 +3,9 @@ local key = vim.keymap.set
 local set = vim.opt
 local cmd = vim.cmd
 local fn = vim.fn
-local pum_visible = fn['coc#pum#visible']
+local pum_visible = function()
+    return fn['coc#pum#visible']() == 1
+end
 local async = fn.CocActionAsync
 local fn_async = function(action)
     return function() async(action) end
@@ -32,13 +34,13 @@ function Coc.setup()
     end)
     key('i', '<Tab>', function()
         return pum_visible() and fn['coc#pum#confirm']() or '<Tab>'
-    end)
+    end, {expr = true})
     key('i', '<C-j>', function()
         return pum_visible() and fn['coc#pum#next'](1) or '<C-j>'
-    end)
+    end, {expr = true})
     key('i', '<C-k>', function()
         return pum_visible() and fn['coc#pum#prev'](1) or '<C-k>'
-    end)
+    end, {expr = true})
     create('BufAdd', 'lua Coc.new_file_open()') -- Auto reload Coc on new file type.
     create('CursorHold', "lua Coc.async('highlight')")
 end

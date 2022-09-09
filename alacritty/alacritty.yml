@@ -768,8 +768,14 @@ key_bindings:
   #- { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
   #- { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop    }
   #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
-  - { key: Left,      mods: Command, mode: ~Alt,        chars: "\x01"            }
-  - { key: Right,     mods: Command, mode: ~Alt,        chars: "\x05"            }
+  - { key: Left,      mods: Command,        mode: ~Alt, chars: "\x01"           }
+  - { key: Right,     mods: Command,        mode: ~Alt, chars: "\x05"           }
+  - { key: Return,    mods: Control,        mode: ~Alt, chars: "\x1b[13;5u"     }
+  - { key: Return,    mods: Shift,          mode: ~Alt, chars: "\x1b[13;2u"     }
+  - { key: Return,    mods: Shift,          mode: ~Alt, chars: "\x1b[13;2u"     }
+  - { key: Tab,       mods: Control,        mode: ~Alt, chars: "\x1b[9;5u"      }
+  - { key: Tab,       mods: Shift|Control,  mode: ~Alt, chars: "\x1b[9;6u"      }
+  - { key: I,         mods: Control,        mode: ~Alt, chars: "\x1b[73;5u"     }
 
   # Vi Mode
   - { key: M,  mods: Command, mode: ~Search,    action: ToggleViMode            }

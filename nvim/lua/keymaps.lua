@@ -23,10 +23,12 @@ function Keymaps.set()
     key('n', '<Space>f', ':lua Keymaps.format()<CR>')
     key('n', '<Space>s', ':lua Keymaps.format()<CR>:w<CR>')
     key('n', '<Space>o', ':Files<CR>')
-    key('i', '<Space>mm', '$$<Left>')
-    key('i', '<Space>mmm', '$$<CR><CR>$$<Up>')
+    key('i', '<Space><Space>m', '$$<Left>')
+    key('i', '<Space><Space>mm', '$$<CR><CR>$$<Up>')
     key('n', '<Space>f', ':Grepper -tool rg -buffer -query<CR>')
     key('n', '<Space>ff', ':Grepper -tool rg<CR>')
+    key('n', '<Space><Tab>', ':bn<CR>')
+    key('n', '<Space><S-Tab>', ':bp<CR>')
 end
 
 return Keymaps
