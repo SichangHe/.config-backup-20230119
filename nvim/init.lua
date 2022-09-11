@@ -18,6 +18,7 @@ function AllConfig()
     if vscode_exists then
         -- Running inside vscode
     else
+        source("one_half_light.vim")
         use('options')
         use('keymaps')
         use('dein')
@@ -31,7 +32,6 @@ function AllConfig()
         Coc.setup()
         Au.set()
         Plugins.set()
-        source("one_half_light.vim")
     end
 end
 

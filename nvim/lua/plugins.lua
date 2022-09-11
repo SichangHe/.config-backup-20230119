@@ -6,6 +6,8 @@ function Plugins.set()
     require('nvim-web-devicons').setup {
         default = true,
     }
+    require("scrollbar").setup {}
+    require("scrollbar.handlers.search").setup {}
     g.vim_markdown_folding_disabled = true
     g.mkdp_auto_close = false
     g.mkdp_markdown_css = NvimConfigPath .. 'markdown.css'

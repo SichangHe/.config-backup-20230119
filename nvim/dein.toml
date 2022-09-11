@@ -30,3 +30,9 @@ build = 'yarn'
 
 [[plugins]]
 repo = 'luochen1990/rainbow'
+
+[[plugins]]
+repo = 'petertriho/nvim-scrollbar'
+
+[[plugins]]
+repo = 'kevinhwang91/nvim-hlslens'
