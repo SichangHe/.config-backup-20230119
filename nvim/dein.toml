@@ -14,10 +14,8 @@ repo = 'mhinz/vim-grepper'
 # diffview.nvim
 [[plugins]]
 repo = 'nvim-lua/plenary.nvim'
-
 [[plugins]]
 repo = 'sindrets/diffview.nvim'
-
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
 
@@ -31,8 +29,16 @@ build = 'yarn'
 [[plugins]]
 repo = 'luochen1990/rainbow'
 
+# scrollbar
 [[plugins]]
 repo = 'petertriho/nvim-scrollbar'
-
 [[plugins]]
 repo = 'kevinhwang91/nvim-hlslens'
+
+[[plugins]]
+repo = 'numToStr/Comment.nvim'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
