@@ -9,6 +9,27 @@ function Plugins.set()
     require("scrollbar").setup {}
     require("scrollbar.handlers.search").setup {}
     require('Comment').setup {}
+    require('nvim-treesitter.configs').setup {
+        highlight = {
+            enable = true,
+        },
+        ensure_installed = {
+            'bash',
+            'c',
+            'fish',
+            'javascript',
+            'jsonc',
+            'julia',
+            'latex',
+            'lua',
+            'markdown',
+            'python',
+            'ruby',
+            'rust',
+            'typescript',
+        },
+        auto_install = true,
+    }
     g.vim_markdown_folding_disabled = true
     g.mkdp_auto_close = false
     g.mkdp_markdown_css = NvimConfigPath .. 'markdown.css'
