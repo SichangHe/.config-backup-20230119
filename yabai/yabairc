@@ -33,9 +33,9 @@ yabai -m config normal_window_opacity        0.90
 
 ## window border
 yabai -m config window_border                on
-yabai -m config window_border_width          8
-yabai -m config active_window_border_color   0x40f5050d
-yabai -m config normal_window_border_color   0x800752ba
+yabai -m config window_border_width          1
+yabai -m config active_window_border_color   0xfff5050d
+yabai -m config normal_window_border_color   0xff0752ba
 yabai -m config insert_feedback_color        0x80d75f5f
 
 ## split policy
