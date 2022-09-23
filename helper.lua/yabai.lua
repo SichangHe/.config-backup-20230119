@@ -1,9 +1,7 @@
-function run_command(command, pattern)
-    handle = io.popen(command)
-    result = handle:read(pattern or "*a")
-    handle:close()
-    return result
-end
+-- This is an exacutable, so we abuse global variables.
+package.path = debug.getinfo(1).source:match("@?(.*/)") .. '/?.lua;' .. package.path
+Command = require('command')
+Noti = require('notification')
 
 function get_last()
     if id == id_list[1] then
@@ -26,8 +24,8 @@ function get_next()
 end
 
 function cycle()
-    ids = run_command("yabai -m query --windows --space mouse | jq '.[].id'")
-    id = tonumber(run_command("yabai -m query --windows --window | jq '.id'"))
+    ids = Command.run("yabai -m query --windows --space mouse | jq '.[].id'")
+    id = tonumber(Command.run("yabai -m query --windows --window | jq '.id'"))
 
     id_list = {}
     for now in string.gmatch(ids, "%w+") do
@@ -35,27 +33,28 @@ function cycle()
     end
     table.sort(id_list)
 
-    target = args[1] == 'next' and get_next() or get_last()
-    return run_command("yabai -m window --focus " .. target)
+    target = Args[1] == 'next' and get_next() or get_last()
+    return Command.run("yabai -m window --focus " .. target)
 end
 
 function info()
-    apps = run_command("yabai -m query --windows --space mouse | jq '.[].app'")
+    apps = Command.run("yabai -m query --windows --space mouse | jq '.[].app'")
     app_str = ''
     for app in string.gmatch(apps, "\"%w+[%s\"]") do
         app_str = app_str .. string.match(app, "%w+") .. ' '
     end
-    space_id = run_command("yabai -m query --spaces --space mouse | jq '.index'", "*l")
-    window_num = run_command("yabai -m query --windows --space mouse | jq '.[].title' | wc -l", "*l")
-    command = string.format("osascript -e 'display notification \"%s\" with title \"Space %s\" subtitle \"%s windows\"'"
-        , app_str, space_id, window_num)
-    return run_command(command)
+    space_id = Command.run("yabai -m query --spaces --space mouse | jq '.index'", "*l")
+    window_num = Command.run("yabai -m query --windows --space mouse | jq '.[].title' | wc -l", "*l")
+    return Noti.display(app_str, 'Space ' .. space_id, window_num .. ' windows')
 end
 
-args = { ... }
-if args[1] == 'next' or args[1] == 'last' then
-    return cycle()
-else if args[1] == 'info' then
-        return info()
+Args = { ... }
+if Args[1] == 'next' or Args[1] == 'last' then
+    result = cycle()
+else if Args[1] == 'info' then
+        result = info()
     end
+end
+if result ~= '' then
+    Noti.display(result, 'yabai', 'script failed')
 end
