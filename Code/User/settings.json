@@ -214,7 +214,7 @@
     ],
     "errorLens.messageBackgroundMode": "none",
     // files
-    "files.autoSaveDelay": 4000,
+    "files.autoSaveDelay": 800,
     "files.associations": {
         "*.erb": "erb"
     },
@@ -226,6 +226,7 @@
         "**/.project": true,
         "**/.settings": true
     },
+    "files.saveConflictResolution": "overwriteFileOnDisk",
     "files.watcherExclude": {
         "**/.git": true,
         "**.pdf": true,

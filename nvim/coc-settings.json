@@ -1,4 +1,5 @@
 {
+    "clangd.arguments": ["--clang-tidy"],
     "diagnostic.virtualText": true,
     "pyright.organizeimports.provider": "isort",
     "python.formatting.provider": "black",

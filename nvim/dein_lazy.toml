@@ -36,3 +36,8 @@ build = 'cd app && yarn'
 repo = 'fannheyward/coc-pyright'
 on_ft = 'python'
 build = 'yarn'
+
+[[plugins]]
+repo = 'clangd/coc-clangd'
+on_ft = ['c', 'cpp']
+build = 'yarn'
