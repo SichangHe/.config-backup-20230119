@@ -6,10 +6,12 @@ on_event = 'CmdLineEnter'
 [[plugins]]
 repo = 'numToStr/Comment.nvim'
 on_event = 'CmdLineEnter'
+hook_post_source = "lua require('Comment').setup {}"
 
 [[plugins]]
 repo = 'windwp/nvim-autopairs'
 on_event = 'InsertEnter'
+hook_post_source = "lua require('nvim-autopairs').setup {}"
 
 [[plugins]]
 repo = 'iamcco/markdown-preview.nvim'
@@ -19,6 +21,10 @@ build = 'cd app && yarn'
 [[plugins]]
 repo = 'mhinz/vim-grepper'
 on_event = 'CmdLineEnter'
+
+[[plugins]]
+repo = 'machakann/vim-swap'
+on_event = 'InsertEnter'
 
 ## diffview.nvim
 [[plugins]]
@@ -30,6 +36,7 @@ on_event = 'CmdLineEnter'
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
 on_event = 'CmdLineEnter'
+hook_post_source = "lua require('nvim-web-devicons').setup {default = true}"
 
 # Languages support - activate on filetype in current directory
 [[plugins]]

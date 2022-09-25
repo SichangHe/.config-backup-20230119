@@ -2,13 +2,8 @@ local M = {}
 local g = vim.g
 
 function M.set()
-    require('nvim-autopairs').setup {}
-    require('nvim-web-devicons').setup {
-        default = true,
-    }
     require("scrollbar").setup {}
     require("scrollbar.handlers.search").setup {}
-    require('Comment').setup {}
     require('nvim-treesitter.configs').setup {
         highlight = {
             enable = true,
