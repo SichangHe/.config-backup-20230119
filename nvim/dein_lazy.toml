@@ -31,42 +31,50 @@ on_event = 'CmdLineEnter'
 repo = 'kyazdani42/nvim-web-devicons'
 on_event = 'CmdLineEnter'
 
-# Languages support - activate on filetype
+# Languages support - activate on filetype in current directory
 [[plugins]]
 repo = 'neoclide/coc-json'
 name = 'json'
 build = 'yarn'
-on_ft = 'json'
-
-[[plugins]]
-repo = 'fannheyward/coc-markdownlint'
-name = 'markdownlint'
-build = 'yarn'
-on_ft = 'markdown'
+on_event = ['VimEnter', 'DirChanged']
+on_if = "system('fd -t f -e json -e jsonc') != ''"
 
 [[plugins]]
 repo = 'neoclide/coc-solargraph'
 name = 'solargraph'
 build = 'yarn'
-on_ft = ['ruby', 'eruby']
+on_event = ['VimEnter', 'DirChanged']
+on_if = "system('fd -t f -e rb') != ''"
 
 [[plugins]]
 repo = 'josa42/coc-lua'
 name = 'lua'
 build = 'yarn'
-on_ft = 'lua'
-
-[[plugins]]
-repo = 'preservim/vim-markdown'
-name = 'markdown'
-on_ft = 'markdown'
+on_event = ['VimEnter', 'DirChanged']
+on_if = "system('fd -t f -e lua') != ''"
 
 [[plugins]]
 repo = 'fannheyward/coc-pyright'
-on_ft = 'python'
+on_event = ['VimEnter', 'DirChanged']
+on_if = "system('fd -t f -e py') != ''"
 build = 'yarn'
 
 [[plugins]]
 repo = 'clangd/coc-clangd'
-on_ft = ['c', 'cpp']
+on_event = ['VimEnter', 'DirChanged']
+on_if = "system('fd -t f -e c -e cpp -e cc -e cxx -e h -e hpp -e hh') != ''"
 build = 'yarn'
+
+## Markdown
+[[plugins]]
+repo = 'fannheyward/coc-markdownlint'
+name = 'markdownlint'
+build = 'yarn'
+on_event = ['VimEnter', 'DirChanged']
+on_if = "system('fd -t f -e md') != ''"
+
+[[plugins]]
+repo = 'preservim/vim-markdown'
+name = 'markdown'
+on_event = ['VimEnter', 'DirChanged']
+on_if = "system('fd -t f -e md') != ''"
