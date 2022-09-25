@@ -1,3 +1,37 @@
+# Command providers - activate on command line enter or specific commands
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+on_event = 'CmdLineEnter'
+
+[[plugins]]
+repo = 'numToStr/Comment.nvim'
+on_event = 'CmdLineEnter'
+
+[[plugins]]
+repo = 'windwp/nvim-autopairs'
+on_event = 'InsertEnter'
+
+[[plugins]]
+repo = 'iamcco/markdown-preview.nvim'
+on_cmd = 'MarkdownPreview'
+build = 'cd app && yarn'
+
+[[plugins]]
+repo = 'mhinz/vim-grepper'
+on_event = 'CmdLineEnter'
+
+## diffview.nvim
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+on_event = 'CmdLineEnter'
+[[plugins]]
+repo = 'sindrets/diffview.nvim'
+on_event = 'CmdLineEnter'
+[[plugins]]
+repo = 'kyazdani42/nvim-web-devicons'
+on_event = 'CmdLineEnter'
+
+# Languages support - activate on filetype
 [[plugins]]
 repo = 'neoclide/coc-json'
 name = 'json'
@@ -26,11 +60,6 @@ on_ft = 'lua'
 repo = 'preservim/vim-markdown'
 name = 'markdown'
 on_ft = 'markdown'
-
-[[plugins]]
-repo = 'iamcco/markdown-preview.nvim'
-on_ft = 'markdown'
-build = 'cd app && yarn'
 
 [[plugins]]
 repo = 'fannheyward/coc-pyright'

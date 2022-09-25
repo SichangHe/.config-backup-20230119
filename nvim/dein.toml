@@ -1,23 +1,6 @@
 [[plugins]]
-repo = 'windwp/nvim-autopairs'
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-
-[[plugins]]
 repo = 'neoclide/coc-tabnine'
 build = 'yarn'
-
-[[plugins]]
-repo = 'mhinz/vim-grepper'
-
-# diffview.nvim
-[[plugins]]
-repo = 'nvim-lua/plenary.nvim'
-[[plugins]]
-repo = 'sindrets/diffview.nvim'
-[[plugins]]
-repo = 'kyazdani42/nvim-web-devicons'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
@@ -34,9 +17,6 @@ repo = 'luochen1990/rainbow'
 repo = 'petertriho/nvim-scrollbar'
 [[plugins]]
 repo = 'kevinhwang91/nvim-hlslens'
-
-[[plugins]]
-repo = 'numToStr/Comment.nvim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
