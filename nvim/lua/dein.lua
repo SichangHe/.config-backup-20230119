@@ -1,4 +1,4 @@
-Dein = {}
+local M = {}
 local set = vim.opt
 local fn = vim.fn
 local add = fn['dein#add']
@@ -12,7 +12,7 @@ local load_toml = fn['dein#load_toml']
 local recache_runtimepath = fn['dein#recache_runtimepath']
 local save_state = fn['dein#save_state']
 
-function Dein.activate()
+function M.activate()
     local dein_path = NvimConfigPath .. "dein"
     set.runtimepath:append(dein_path)
 
@@ -33,11 +33,11 @@ function Dein.activate()
     if check_install() == 1 then install() end
 end
 
-function Dein.clean()
+function M.clean()
     for _, val in ipairs(check_clean()) do
         fn.delete(val, 'rf')
     end
     recache_runtimepath()
 end
 
-return Dein
+return M

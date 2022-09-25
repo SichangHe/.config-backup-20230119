@@ -1,7 +1,7 @@
-Options = {}
+local M = {}
 local set = vim.opt
 
-function Options.set()
+function M.set()
     set.breakindent = true
     set.confirm = true
     set.endofline = false
@@ -27,4 +27,4 @@ function Options.set()
     set.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,n-i:blinkon500blinkoff50'
 end
 
-return Options
+return M

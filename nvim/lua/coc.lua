@@ -1,4 +1,4 @@
-Coc = {}
+local M = {}
 local key = vim.keymap.set
 local set = vim.opt
 local cmd = vim.cmd
@@ -10,20 +10,20 @@ local async = fn.CocActionAsync
 local fn_async = function(action)
     return function() async(action) end
 end
-Coc.path_len = #set.runtimepath:get()
+M.path_len = #set.runtimepath:get()
 local create = function(event, command)
     vim.api.nvim_create_autocmd(event, {command = command})
 end
 
-function Coc.new_file_open()
+function M.new_file_open()
     local new_path_len = #set.runtimepath:get()
-    if new_path_len ~= Coc.path_len then
-        Coc.path_len = new_path_len
+    if new_path_len ~= M.path_len then
+        M.path_len = new_path_len
         cmd('silent! CocRestart')
     end
 end
 
-function Coc.setup()
+function M.setup()
     key('n', '<Space>p', ':CocList commands<CR>')
     key('n', 'gd', fn_async('jumpDefinition'))
     key('n', 'gy', fn_async('jumpTypeDefinition'))
@@ -55,9 +55,9 @@ function Coc.setup()
     end, {expr = true})
     create('DirChanged', 'lua Coc.new_file_open()') -- Auto reload Coc on changing directory.
     create('CursorHold', "lua Coc.async('highlight')")
-    create('CmdLineEnter', 'lua Coc.path_len = #set.runtimepath:get()') -- Update `Coc.path_len` on any command.
+    create('CmdLineEnter', 'lua Coc.path_len = #vim.opt.runtimepath:get()') -- Update `Coc.path_len` on any command.
 end
 
-Coc.async = async
+M.async = async
 
-return Coc
+return M

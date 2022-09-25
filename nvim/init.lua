@@ -10,8 +10,8 @@ local function use(module)
 end
 
 function AllConfig()
-    use('general_options')
-    use('general_keymaps')
+    GeneralOptions = use('general_options')
+    GeneralKeymaps = use('general_keymaps')
     GeneralOptions.set()
     GeneralKeymaps.set()
 
@@ -19,12 +19,12 @@ function AllConfig()
         -- Running inside vscode
     else
         source("one_half_light.vim")
-        use('options')
-        use('keymaps')
-        use('dein')
-        use('coc')
-        use('autocmd')
-        use('plugins')
+        Options = use('options')
+        Keymaps = use('keymaps')
+        Dein = use('dein')
+        Coc = use('coc')
+        Au = use('autocmd')
+        Plugins = use('plugins')
 
         Options.set()
         Keymaps.set()

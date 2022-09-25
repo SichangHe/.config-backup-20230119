@@ -1,4 +1,4 @@
-Keymaps = {}
+local M = {}
 local fn = vim.fn
 local set = vim.opt
 local cmd = vim.cmd
@@ -6,7 +6,7 @@ local suggestion_show = function() return fn.pumvisible == 1 end
 local suggestion_selected = function() return fn.empty('completion_selected') == 1 end
 local key = vim.keymap.set
 
-function Keymaps.format()
+function M.format()
     if set.filetype:get() == 'markdown' then
         cmd('CocCommand markdownlint.fixAll')
     else
@@ -14,7 +14,7 @@ function Keymaps.format()
     end
 end
 
-function Keymaps.set()
+function M.set()
     key('i', 'jk', '<Esc>')
     key('i', 'kj', '<Esc>')
     key('i', '<C-J>', function() return suggestion_show() and '<C-J>' or '<C-N>' end, { expr = true })
@@ -31,4 +31,4 @@ function Keymaps.set()
     key('n', '<Space><S-Tab>', ':bp<CR>')
 end
 
-return Keymaps
+return M

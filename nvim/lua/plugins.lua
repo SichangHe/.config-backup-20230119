@@ -1,7 +1,7 @@
-Plugins = {}
+local M = {}
 local g = vim.g
 
-function Plugins.set()
+function M.set()
     require('nvim-autopairs').setup {}
     require('nvim-web-devicons').setup {
         default = true,
@@ -42,4 +42,4 @@ function Plugins.set()
     g.airline_theme = 'google_light'
 end
 
-return Plugins
+return M

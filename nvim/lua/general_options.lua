@@ -1,7 +1,7 @@
-GeneralOptions = {}
+local M = {}
 local set = vim.opt
 
-function GeneralOptions.set()
+function M.set()
     vim.cmd("lang en_US.UTF-8")
     set.clipboard = 'unnamed'
     set.timeoutlen = 300
@@ -9,4 +9,4 @@ function GeneralOptions.set()
     set.virtualedit = 'block'
 end
 
-return GeneralOptions
+return M
