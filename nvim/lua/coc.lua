@@ -53,8 +53,9 @@ function Coc.setup()
             return '<C-k>'
         end
     end, {expr = true})
-    create('BufAdd', 'lua Coc.new_file_open()') -- Auto reload Coc on new file type.
+    create('DirChanged', 'lua Coc.new_file_open()') -- Auto reload Coc on changing directory.
     create('CursorHold', "lua Coc.async('highlight')")
+    create('CmdLineEnter', 'lua Coc.path_len = #set.runtimepath:get()') -- Update `Coc.path_len` on any command.
 end
 
 Coc.async = async
