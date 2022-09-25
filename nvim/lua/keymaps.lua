@@ -17,6 +17,8 @@ end
 function M.set()
     key('i', 'jk', '<Esc>')
     key('i', 'kj', '<Esc>')
+    key('i', '<Space>', '<C-g>u<Space>')
+    key('i', '<CR>', '<C-g>u<CR>')
     key('i', '<C-J>', function() return suggestion_show() and '<C-J>' or '<C-N>' end, { expr = true })
     key('i', '<C-K>', function() return suggestion_show() and '<C-K>' or '<C-P>' end, { expr = true })
     key('n', '<Space>w', '<C-W>')

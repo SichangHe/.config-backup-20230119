@@ -35,8 +35,9 @@ function M.setup()
     key('i', '<Tab>', function()
         if pum_visible() then
             fn['coc#pum#confirm']()
+            return '<C-g>u'
         else
-            return '<Tab>'
+            return '<C-g>u<Tab>'
         end
     end, {expr = true})
     key('i', '<C-j>', function()
