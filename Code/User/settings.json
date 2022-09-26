@@ -407,7 +407,7 @@
     "vscode_custom_css.statusbar": false,
     // vscode-neovim
     "vscode-neovim.mouseSelectionStartVisualMode": true,
-    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/Users/sichanghe/.nix-profile/bin/nvim",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     // window
     "window.title": "${dirty}${activeEditorLong} ㅤ ㅤ ${rootName}",
