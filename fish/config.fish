@@ -38,3 +38,9 @@ set -gx BAT_THEME GitHub
 
 # fzf use fd
 set -gx FZF_DEFAULT_COMMAND 'fd -H --strip-cwd-prefix'
+
+# Nix
+if test -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
+end
+
