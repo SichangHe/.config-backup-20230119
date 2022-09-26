@@ -1,6 +1,12 @@
 nix-env -ibA nixpkgs.asciinema
 nix-env -ibA nixpkgs.bat
 nix-env -ibA nixpkgs.btop
+nix-env -ibA nixpkgs.cargo-cache
+nix-env -ibA nixpkgs.cargo-edit
+nix-env -ibA nixpkgs.cargo-expand
+nix-env -ibA nixpkgs.cargo-nextest
+nix-env -ibA nixpkgs.cargo-sweep
+nix-env -ibA nixpkgs.cargo-update
 nix-env -ibA nixpkgs.cmake
 nix-env -ibA nixpkgs.coreutils
 nix-env -ibA nixpkgs.deno
@@ -16,6 +22,7 @@ nix-env -ibA nixpkgs.llvm
 nix-env -ibA nixpkgs.lua
 nix-env -ibA nixpkgs.lynx
 nix-env -ibA nixpkgs.mdbook
+nix-env -ibA nixpkgs.mdbook-katex
 nix-env -ibA nixpkgs.meilisearch
 nix-env -ibA nixpkgs.mpv
 nix-env -ibA nixpkgs.ncdu
