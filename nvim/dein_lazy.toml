@@ -1,5 +1,8 @@
 # Command providers - activate on command line enter or specific commands
 [[plugins]]
+repo = 'junegunn/fzf'
+on_event = 'CmdLineEnter'
+[[plugins]]
 repo = 'junegunn/fzf.vim'
 on_event = 'CmdLineEnter'
 

@@ -16,7 +16,6 @@ function M.set()
     set.mouse = 'a'
     set.number = true
     set.relativenumber = true
-    set.runtimepath:append('/opt/homebrew/opt/fzf')
     set.scrolloff = 3
     set.shiftwidth = 4
     set.spell = true
