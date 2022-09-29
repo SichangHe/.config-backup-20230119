@@ -34,9 +34,11 @@ nix-env -ibA nixpkgs.qpdf
 nix-env -ibA nixpkgs.R
 nix-env -ibA nixpkgs.ripgrep
 nix-env -ibA nixpkgs.ruby
+nix-env -ibA nixpkgs.sd
 nix-env -ibA nixpkgs.speedtest-cli
 nix-env -ibA nixpkgs.starship
 nix-env -ibA nixpkgs.tealdeer
 nix-env -ibA nixpkgs.tmux
 nix-env -ibA nixpkgs.unpaper
 nix-env -ibA nixpkgs.xdg-ninja
+nix-env -ibA nixpkgs.zoxide

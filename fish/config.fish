@@ -33,7 +33,14 @@ if test -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
 end
 
 # starship
-starship init fish | source
+if type -q starship
+    starship init fish | source
+end
+
+# zoxide
+if type -q zoxide
+    zoxide init fish | source
+end
 
 # default editor
 set -gx EDITOR nvim
