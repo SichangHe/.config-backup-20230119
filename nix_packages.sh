@@ -9,6 +9,7 @@ nix-env -ibA nixpkgs.cargo-sweep
 nix-env -ibA nixpkgs.cargo-update
 nix-env -ibA nixpkgs.cmake
 nix-env -ibA nixpkgs.coreutils
+nix-env -ibA nixpkgs.delta
 nix-env -ibA nixpkgs.deno
 nix-env -ibA nixpkgs.docker
 nix-env -ibA nixpkgs.du-dust
