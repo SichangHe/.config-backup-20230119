@@ -1,8 +1,10 @@
+# Nix
+if test -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
+end
+
 # path
 source ~/.config/fish/path.fish
-
-# alias
-source ~/.config/fish/alias.sh
 
 # proxy
 source ~/.config/fish/proxy.fish
@@ -27,10 +29,8 @@ else if [ (uname) = Linux ] #! Linux {{
 end
 #! }
 
-# Nix
-if test -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
-  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
-end
+# alias
+source ~/.config/fish/alias.sh
 
 # starship
 if type -q starship
