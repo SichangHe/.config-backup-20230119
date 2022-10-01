@@ -24,13 +24,13 @@ function M.set()
     key('n', '<Space>w', '<C-W>')
     key('n', '<Space>f', ':lua Keymaps.format()<CR>')
     key('n', '<Space>s', ':lua Keymaps.format()<CR>:w<CR>')
+    key('n', '<Space>h', ':History<CR>')
     key('n', '<Space>o', ':Files<CR>')
+    key('n', '<Space><Tab>', ':Buffers<CR>')
     key('i', '<Space><Space>m', '$$<Left>')
     key('i', '<Space><Space>mm', '$$<CR><CR>$$<Up>')
     key('n', '<Space>f', ':Grepper -tool rg -buffer -query<CR>')
     key('n', '<Space>ff', ':Grepper -tool rg<CR>')
-    key('n', '<Space><Tab>', ':bn<CR>')
-    key('n', '<Space><S-Tab>', ':bp<CR>')
 end
 
 return M
