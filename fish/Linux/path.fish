@@ -1,2 +1,2 @@
-set PATH -gx ~/.local/bin $PATH
-set PATH -gx /usr/sbin $PATH
+set -gx PATH ~/.local/bin $PATH
+set -gx PATH /usr/sbin $PATH

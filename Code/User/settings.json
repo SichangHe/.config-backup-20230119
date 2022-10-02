@@ -343,6 +343,10 @@
         "--allow-redefinition"
     ],
     "redhat.telemetry.enabled": false,
+    "remote.SSH.remotePlatform": {
+        "10.200.20.211": "linux",
+        "10.200.14.153": "linux"
+    },
     "remote.SSH.useLocalServer": false,
     // ruby
     "ruby.codeCompletion": "rcodetools",

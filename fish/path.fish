@@ -1,2 +1,2 @@
-set PATH -gx /usr/local/bin $PATH
-set PATH -gx ~/.cargo/bin $PATH
+set -gx PATH /usr/local/bin $PATH
+set -gx PATH ~/.cargo/bin $PATH
