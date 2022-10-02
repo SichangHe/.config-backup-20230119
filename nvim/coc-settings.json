@@ -7,7 +7,7 @@
     "snippets.textmateSnippetsRoots": [
         "~/.config/Code/User/snippets",
     ],
-    "solargraph.commandPath": "/opt/homebrew/lib/ruby/gems/3.1.0/bin/solargraph",
+    "solargraph.commandPath": "/Users/sichanghe/.gem/ruby/3.1.0/bin/solargraph",
     "solargraph.diagnostics": true,
     "solargraph.formatting": true,
 }
