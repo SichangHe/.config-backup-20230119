@@ -1,7 +1,6 @@
 exa
 koekeishiya/formulae/skhd
 koekeishiya/formulae/yabai
-libpq
 node
 pandoc
 python@3.10
