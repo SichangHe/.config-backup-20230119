@@ -55,5 +55,9 @@
 	"enter": {
 		"prefix": "enter",
 		"body": "⏎"
-	}
+	},
+	"alpha": {
+		"prefix": "alpha",
+		"body": "α"
+	},
 }
