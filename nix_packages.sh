@@ -18,6 +18,7 @@ nix-env -ibA nixpkgs.fd
 nix-env -ibA nixpkgs.fish
 nix-env -ibA nixpkgs.fzf
 nix-env -ibA nixpkgs.go
+nix-env -ibA nixpkgs.jq
 nix-env -ibA nixpkgs.just
 nix-env -ibA nixpkgs.llvm
 nix-env -ibA nixpkgs.lua
