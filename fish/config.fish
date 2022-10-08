@@ -49,4 +49,4 @@ set -gx EDITOR nvim
 set -gx BAT_THEME GitHub
 
 # fzf use fd
-set -gx FZF_DEFAULT_COMMAND 'fd -H --strip-cwd-prefix'
+set -gx FZF_DEFAULT_COMMAND 'fd -H --strip-cwd-prefix -E ".git"'
