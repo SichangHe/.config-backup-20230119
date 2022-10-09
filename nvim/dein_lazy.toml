@@ -75,6 +75,12 @@ on_event = ['VimEnter', 'DirChanged']
 on_if = "system('fd -t f -e c -e cpp -e cc -e cxx -e h -e hpp -e hh') != ''"
 build = 'yarn'
 
+[[plugins]]
+repo = 'neoclide/coc-tsserver'
+on_event = ['VimEnter', 'DirChanged']
+on_if = "system('fd -t f -e js -e ts') != ''"
+build = 'yarn'
+
 ## Markdown
 [[plugins]]
 repo = 'fannheyward/coc-markdownlint'

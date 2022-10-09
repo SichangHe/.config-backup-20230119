@@ -12,6 +12,7 @@ nix-env -ibA nixpkgs.coreutils
 nix-env -ibA nixpkgs.delta
 nix-env -ibA nixpkgs.deno
 nix-env -ibA nixpkgs.docker
+nix-env -ibA nixpkgs.dprint
 nix-env -ibA nixpkgs.du-dust
 nix-env -ibA nixpkgs.exercism
 nix-env -ibA nixpkgs.fd
