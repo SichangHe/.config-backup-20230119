@@ -19,10 +19,14 @@ repo = 'petertriho/nvim-scrollbar'
 repo = 'kevinhwang91/nvim-hlslens'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline'
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+repo = 'nvim-lualine/lualine.nvim'
 
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 hook_post_update = 'TSUpdate'
+
+[[plugins]]
+repo = 'dense-analysis/ale'
+
+[[plugins]]
+repo = 'navarasu/onedark.nvim'

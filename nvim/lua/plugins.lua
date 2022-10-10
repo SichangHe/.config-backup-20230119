@@ -25,6 +25,21 @@ function M.set()
         },
         auto_install = true,
     }
+    local onedark = require('onedark')
+    onedark.setup {
+        style = 'light',
+    }
+    onedark.load()
+    require('lualine').setup {
+        sections = {
+            lualine_a = {'mode'},
+            lualine_b = {'filename'},
+            lualine_c = {'diagnostics'},
+            lualine_x = {'filetype'},
+            lualine_y = {'progress', 'location', 'diff'},
+            lualine_z = {'branch'},
+        },
+    }
     g.vim_markdown_folding_disabled = true
     g.mkdp_auto_close = false
     g.mkdp_markdown_css = NvimConfigPath .. 'markdown.css'
@@ -34,7 +49,6 @@ function M.set()
     g.rainbow_conf = {
         ctermfgs = {'DarkBlue', 'DarkGreen', 'DarkYellow', 'DarkMagenta', 'DarkRed'},
     }
-    g.airline_theme = 'google_light'
 end
 
 return M
