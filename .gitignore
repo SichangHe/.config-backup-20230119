@@ -6,6 +6,7 @@ configstore/
 install-id
 SnapGene.ini
 libvirt/
+memos.json
 
 # from Arch KDE {
 DisplayCAL/
