@@ -10,7 +10,7 @@ repo = 'neoclide/coc-snippets'
 build = 'yarn'
 
 [[plugins]]
-repo = 'luochen1990/rainbow'
+repo = 'p00f/nvim-ts-rainbow'
 
 # scrollbar
 [[plugins]]

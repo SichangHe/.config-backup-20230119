@@ -24,10 +24,21 @@ function M.set()
             'typescript',
         },
         auto_install = true,
+        rainbow = {
+            enable = true,
+        },
     }
     local onedark = require('onedark')
     onedark.setup {
         style = 'light',
+        highlights = {
+            rainbowcol2 = {fg = 'Black'},
+            rainbowcol3 = {fg = 'DarkGreen'},
+            rainbowcol4 = {fg = 'DarkMagenta'},
+            rainbowcol5 = {fg = 'DarkBlue'},
+            rainbowcol6 = {fg = 'DarkRed'},
+            rainbowcol7 = {fg = 'DarkGray'},
+        },
     }
     onedark.load()
     require('lualine').setup {
@@ -45,10 +56,6 @@ function M.set()
     g.mkdp_markdown_css = NvimConfigPath .. 'markdown.css'
     g.gitgutter_sign_modified = '█'
     g.gitgutter_sign_added = '█'
-    g.rainbow_active = 1
-    g.rainbow_conf = {
-        ctermfgs = {'DarkBlue', 'DarkGreen', 'DarkYellow', 'DarkMagenta', 'DarkRed'},
-    }
 end
 
 return M
