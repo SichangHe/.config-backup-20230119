@@ -14,6 +14,7 @@ nix-env -ibA nixpkgs.deno
 nix-env -ibA nixpkgs.docker
 nix-env -ibA nixpkgs.dprint
 nix-env -ibA nixpkgs.du-dust
+nix-env -iA nixpkgs.exa
 nix-env -ibA nixpkgs.exercism
 nix-env -ibA nixpkgs.fd
 nix-env -ibA nixpkgs.fish

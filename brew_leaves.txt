@@ -1,4 +1,3 @@
-exa
 koekeishiya/formulae/skhd
 koekeishiya/formulae/yabai
 node
