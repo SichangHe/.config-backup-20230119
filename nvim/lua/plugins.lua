@@ -32,12 +32,12 @@ function M.set()
     onedark.setup {
         style = 'light',
         highlights = {
-            rainbowcol2 = {fg = 'Black'},
-            rainbowcol3 = {fg = 'DarkGreen'},
-            rainbowcol4 = {fg = 'DarkMagenta'},
-            rainbowcol5 = {fg = 'DarkBlue'},
-            rainbowcol6 = {fg = 'DarkRed'},
-            rainbowcol7 = {fg = 'DarkGray'},
+            rainbowcol1 = {fg = 'Black'},
+            rainbowcol2 = {fg = 'DarkGreen'},
+            rainbowcol3 = {fg = 'DarkMagenta'},
+            rainbowcol4 = {fg = 'DarkBlue'},
+            rainbowcol5 = {fg = 'DarkRed'},
+            rainbowcol6 = {fg = 'DarkGray'},
         },
     }
     onedark.load()
