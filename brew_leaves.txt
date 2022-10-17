@@ -1,8 +1,10 @@
 koekeishiya/formulae/skhd
 koekeishiya/formulae/yabai
+neovim
 node
 pandoc
 python@3.10
+spim
 wasmer
 watchexec
 yarn
