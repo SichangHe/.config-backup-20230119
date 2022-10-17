@@ -23,7 +23,6 @@ nix-env -ibA nixpkgs.go
 nix-env -ibA nixpkgs.jq
 nix-env -ibA nixpkgs.just
 nix-env -ibA nixpkgs.llvm
-nix-env -ibA nixpkgs.lua
 nix-env -ibA nixpkgs.lynx
 nix-env -ibA nixpkgs.mdbook
 nix-env -ibA nixpkgs.mdbook-katex

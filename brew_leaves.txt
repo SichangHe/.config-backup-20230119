@@ -1,8 +1,11 @@
+cmake
 koekeishiya/formulae/skhd
 koekeishiya/formulae/yabai
+luarocks
 neovim
 node
 pandoc
+pkg-config
 python@3.10
 spim
 wasmer
