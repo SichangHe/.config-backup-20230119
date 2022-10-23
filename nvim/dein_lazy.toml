@@ -107,3 +107,10 @@ repo = 'preservim/vim-markdown'
 name = 'markdown'
 on_event = ['VimEnter', 'DirChanged']
 on_if = "system('fd -t f -e md') != ''"
+
+[[plugins]]
+repo = 'fannheyward/coc-rust-analyzer'
+name = 'rust-analyzer'
+on_event = ['VimEnter', 'DirChanged']
+on_if = "system('fd -t f -e rs') != ''"
+build = 'yarn'

@@ -56,6 +56,7 @@ function M.set()
     g.mkdp_markdown_css = NvimConfigPath .. 'markdown.css'
     g.gitgutter_sign_modified = '█'
     g.gitgutter_sign_added = '█'
+    g.ale_disable_lsp = true
 end
 
 return M
