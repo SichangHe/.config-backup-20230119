@@ -50,3 +50,8 @@ set -gx BAT_THEME GitHub
 
 # fzf use fd
 set -gx FZF_DEFAULT_COMMAND 'fd -H --strip-cwd-prefix -E ".git"'
+
+# sccache
+if type -q sccache
+    set -gx RUSTC_WRAPPER sccache
+end

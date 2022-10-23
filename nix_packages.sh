@@ -36,6 +36,7 @@ nix-env -ibA nixpkgs.qpdf
 nix-env -ibA nixpkgs.R
 nix-env -ibA nixpkgs.ripgrep
 nix-env -ibA nixpkgs.ruby
+nix-env -ibA nixpkgs.sccache
 nix-env -ibA nixpkgs.sd
 nix-env -ibA nixpkgs.speedtest-cli
 nix-env -ibA nixpkgs.starship

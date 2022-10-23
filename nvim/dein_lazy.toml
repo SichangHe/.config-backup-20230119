@@ -15,7 +15,7 @@ hook_post_source = "lua require('Comment').setup {}"
 [[plugins]]
 repo = 'rcarriga/nvim-notify'
 on_event = 'VimEnter'
-hook_post_source = "lua require('notify').setup {top_down = false}"
+hook_post_source = "lua require('notify').setup {top_down = false, stages = 'static'}"
 [[plugins]]
 repo = 'MunifTanjim/nui.nvim'
 on_event = 'VimEnter'
