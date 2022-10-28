@@ -30,7 +30,7 @@ end
 #! }
 
 # alias
-source ~/.config/fish/alias.sh
+source ~/.config/fish/alias.fish
 
 # starship
 if type -q starship
