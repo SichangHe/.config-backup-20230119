@@ -1,6 +1,7 @@
 cmake
 koekeishiya/formulae/skhd
 koekeishiya/formulae/yabai
+libpq
 luarocks
 neovim
 node
