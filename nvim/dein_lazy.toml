@@ -60,38 +60,38 @@ repo = 'neoclide/coc-json'
 name = 'json'
 build = 'yarn'
 on_event = ['VimEnter', 'DirChanged']
-on_if = "system('fd -t f -e json -e jsonc') != ''"
+on_if = "system('fd -t f -q -e json -e jsonc') == 0"
 
 [[plugins]]
 repo = 'neoclide/coc-solargraph'
 name = 'solargraph'
 build = 'yarn'
 on_event = ['VimEnter', 'DirChanged']
-on_if = "system('fd -t f -e rb') != ''"
+on_if = "system('fd -t f -q -e rb') == 0"
 
 [[plugins]]
 repo = 'josa42/coc-lua'
 name = 'lua'
 build = 'yarn'
 on_event = ['VimEnter', 'DirChanged']
-on_if = "system('fd -t f -e lua') != ''"
+on_if = "system('fd -t f -q -e lua') == 0"
 
 [[plugins]]
 repo = 'fannheyward/coc-pyright'
 on_event = ['VimEnter', 'DirChanged']
-on_if = "system('fd -t f -e py') != ''"
+on_if = "system('fd -t f -q -e py') == 0"
 build = 'yarn'
 
 [[plugins]]
 repo = 'clangd/coc-clangd'
 on_event = ['VimEnter', 'DirChanged']
-on_if = "system('fd -t f -e c -e cpp -e cc -e cxx -e h -e hpp -e hh') != ''"
+on_if = "system('fd -t f -q -e c -e cpp -e cc -e cxx -e h -e hpp -e hh') == 0"
 build = 'yarn'
 
 [[plugins]]
 repo = 'neoclide/coc-tsserver'
 on_event = ['VimEnter', 'DirChanged']
-on_if = "system('fd -t f -e js -e ts') != ''"
+on_if = "system('fd -t f -q -e js -e ts') == 0"
 build = 'yarn'
 
 ## Markdown
@@ -100,17 +100,17 @@ repo = 'fannheyward/coc-markdownlint'
 name = 'markdownlint'
 build = 'yarn'
 on_event = ['VimEnter', 'DirChanged']
-on_if = "system('fd -t f -e md') != ''"
+on_if = "system('fd -t f -q -e md') == 0"
 
 [[plugins]]
 repo = 'preservim/vim-markdown'
 name = 'markdown'
 on_event = ['VimEnter', 'DirChanged']
-on_if = "system('fd -t f -e md') != ''"
+on_if = "system('fd -t f -q -e md') == 0"
 
 [[plugins]]
 repo = 'fannheyward/coc-rust-analyzer'
 name = 'rust-analyzer'
 on_event = ['VimEnter', 'DirChanged']
-on_if = "system('fd -t f -e rs') != ''"
+on_if = "system('fd -t f -q -e rs') == 0"
 build = 'yarn'
