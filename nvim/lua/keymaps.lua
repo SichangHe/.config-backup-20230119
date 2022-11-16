@@ -33,6 +33,7 @@ function M.set()
     key('i', '<Space><Space>mm', '$$<CR><CR>$$<Up>')
     key('n', '<Space>f', ':Grepper -tool rg -buffer -query<CR>')
     key('n', '<Space>ff', ':Grepper -tool rg<CR>')
+    key('n', '<Space>co', ':!co . && co %<CR>')
 end
 
 return M
