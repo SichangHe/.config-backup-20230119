@@ -42,6 +42,9 @@ function M.set()
     }
     onedark.load()
     require('lualine').setup {
+        options = {
+            theme = 'onelight',
+        },
         sections = {
             lualine_a = {'mode'},
             lualine_b = {'filename'},
