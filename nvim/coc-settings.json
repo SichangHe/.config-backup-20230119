@@ -2,6 +2,7 @@
     "clangd.arguments": ["--clang-tidy"],
     "diagnostic.virtualText": true,
     "diagnostic.virtualTextCurrentLineOnly": false,
+    "elixir.pathToElixirLS": "elixir-ls",
     "pyright.organizeimports.provider": "isort",
     "python.formatting.provider": "black",
     "python.pythonPath": "python3",

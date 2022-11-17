@@ -114,3 +114,9 @@ name = 'rust-analyzer'
 on_event = ['VimEnter', 'DirChanged']
 on_if = "system('fd -t f -q -e rs') == 0"
 build = 'yarn'
+
+[[plugins]]
+repo = 'elixir-lsp/coc-elixir'
+on_event = ['VimEnter', 'DirChanged']
+on_if = "system('fd -t f -q -e ex -e exs') == 0"
+build = 'yarn && yarn prepack'
