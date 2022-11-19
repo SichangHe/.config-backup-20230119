@@ -11,6 +11,10 @@ repo = 'numToStr/Comment.nvim'
 on_event = 'CmdLineEnter'
 hook_post_source = "lua require('Comment').setup {}"
 
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+on_event = 'CmdLineEnter'
+
 
 [[plugins]]
 repo = 'rcarriga/nvim-notify'
