@@ -38,7 +38,7 @@ merged = 0
 rev = 'release'
 build = 'yarn'
 
-# Languages support - activate on filetype in current directory
+# Languages support
 [[plugins]]
 repo = 'neoclide/coc-json'
 name = 'json'
