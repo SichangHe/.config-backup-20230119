@@ -39,6 +39,15 @@ on_cmd = 'MarkdownPreview'
 build = 'cd app && yarn'
 
 [[plugins]]
+repo = 'weirongxu/coc-markdown-preview-enhanced'
+on_event = 'CmdLineEnter'
+build = 'yarn'
+[[plugins]]
+repo = 'weirongxu/coc-webview'
+on_event = 'CmdLineEnter'
+build = 'yarn'
+
+[[plugins]]
 repo = 'mhinz/vim-grepper'
 on_event = 'CmdLineEnter'
 
