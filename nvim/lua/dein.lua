@@ -24,8 +24,6 @@ function M.activate()
         load_toml(lazy_toml_path, { lazy = 1 })
         local toml_path = NvimConfigPath .. "dein.toml"
         load_toml(toml_path)
-        local last_toml_path = NvimConfigPath .. "dein_last.toml"
-        load_toml(last_toml_path)
         end_()
         save_state()
     end

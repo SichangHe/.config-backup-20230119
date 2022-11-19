@@ -67,6 +67,14 @@ repo = 'kyazdani42/nvim-web-devicons'
 on_event = 'CmdLineEnter'
 hook_post_source = "lua require('nvim-web-devicons').setup {default = true}"
 
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+name = 'coc'
+on_event = 'VimEnter'
+merged = 0
+rev = 'release'
+build = 'yarn'
+
 # Languages support - activate on filetype in current directory
 [[plugins]]
 repo = 'neoclide/coc-json'
