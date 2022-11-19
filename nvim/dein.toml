@@ -30,3 +30,64 @@ repo = 'dense-analysis/ale'
 
 [[plugins]]
 repo = 'navarasu/onedark.nvim'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+name = 'coc'
+merged = 0
+rev = 'release'
+build = 'yarn'
+
+# Languages support - activate on filetype in current directory
+[[plugins]]
+repo = 'neoclide/coc-json'
+name = 'json'
+build = 'yarn'
+
+[[plugins]]
+repo = 'neoclide/coc-solargraph'
+name = 'solargraph'
+build = 'yarn'
+
+[[plugins]]
+repo = 'josa42/coc-lua'
+name = 'lua'
+build = 'yarn'
+
+[[plugins]]
+repo = 'fannheyward/coc-pyright'
+build = 'yarn'
+
+[[plugins]]
+repo = 'clangd/coc-clangd'
+build = 'yarn'
+
+[[plugins]]
+repo = 'neoclide/coc-tsserver'
+build = 'yarn'
+
+## Markdown
+[[plugins]]
+repo = 'fannheyward/coc-markdownlint'
+name = 'markdownlint'
+build = 'yarn'
+
+[[plugins]]
+repo = 'preservim/vim-markdown'
+name = 'markdown'
+
+[[plugins]]
+repo = 'weirongxu/coc-markdown-preview-enhanced'
+build = 'yarn'
+[[plugins]]
+repo = 'weirongxu/coc-webview'
+build = 'yarn'
+
+[[plugins]]
+repo = 'fannheyward/coc-rust-analyzer'
+name = 'rust-analyzer'
+build = 'yarn'
+
+[[plugins]]
+repo = 'elixir-lsp/coc-elixir'
+build = 'yarn && yarn prepack'
