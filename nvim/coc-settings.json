@@ -3,6 +3,8 @@
     "diagnostic.virtualText": true,
     "diagnostic.virtualTextCurrentLineOnly": false,
     "elixir.pathToElixirLS": "elixir-ls",
+    "markdownlint.onChange": false,
+    "markdownlint.onOpen": false,
     "pyright.organizeimports.provider": "isort",
     "python.formatting.provider": "black",
     "python.pythonPath": "python3",

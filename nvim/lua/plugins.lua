@@ -56,7 +56,11 @@ function M.set()
     }
     g.vim_markdown_folding_disabled = true
     g.mkdp_auto_close = false
+    g.mkdp_preview_options = {
+        disable_filename = true,
+    }
     g.mkdp_markdown_css = NvimConfigPath .. 'markdown.css'
+    g.mkdp_page_title = '${name}'
     g.gitgutter_sign_modified = '█'
     g.gitgutter_sign_added = '█'
     g.ale_disable_lsp = true

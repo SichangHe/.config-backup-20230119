@@ -6,10 +6,13 @@ function M.set()
     key('v', [[<Space>(]], [[c(<C-r>*)<Esc>]])
     key('v', [[<Space>[]], [[c[<C-r>*]<Esc>]])
     key('v', [[<Space>{]], [[c{<C-r>*}<Esc>]])
+    key('v', [[<Space><]], [[c<<C-r>*><Esc>]])
     key('v', [[<Space>`]], [[c`<C-r>*`<Esc>]])
     key('v', [[<Space>']], [[c'<C-r>*'<Esc>]])
     key('v', [[<Space>"]], [[c"<C-r>*"<Esc>]])
     key('v', [[<Space>$]], [[c$<C-r>*$<Esc>]])
+    key('v', [[<Space>*]], [[c*<C-r>**<Esc>]])
+    key('v', [[<Space>**]], [[c**<C-r>***<Esc>]])
 end
 
 return M
