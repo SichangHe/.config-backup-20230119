@@ -5,9 +5,11 @@
     "elixir.pathToElixirLS": "elixir-ls",
     "markdownlint.onChange": false,
     "markdownlint.onOpen": false,
+    "markdownlint.onSave": true,
     "pyright.organizeimports.provider": "isort",
     "python.formatting.provider": "black",
     "python.pythonPath": "python3",
+    "rust-analyzer.checkOnSave.command": "clippy",
     "rust-analyzer.server.path": "rust-analyzer",
     "snippets.textmateSnippetsRoots": [
         "~/.config/Code/User/snippets"
