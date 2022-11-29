@@ -34,6 +34,7 @@ function M.set()
     key('n', '<Space>f', ':Grepper -tool rg -buffer -query<CR>')
     key('n', '<Space>ff', ':Grepper -tool rg<CR>')
     key('n', '<Space>co', ':!co . && co %<CR>')
+    key('i', '<C-x><C-f>', '<plug>(fzf-complete-path)')
 end
 
 return M
