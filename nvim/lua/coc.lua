@@ -3,10 +3,14 @@ local key = vim.keymap.set
 local set = vim.opt
 local cmd = vim.cmd
 local fn = vim.fn
+local pum_visible = function()
+    return fn['coc#pum#visible']() == 1
+end
 local async = fn.CocActionAsync
 local fn_async = function(action)
     return function() async(action) end
 end
+local refresh = fn['coc#refresh']
 M.path_len = #set.runtimepath:get()
 local create = function(event, command)
     vim.api.nvim_create_autocmd(event, {command = command})
@@ -29,9 +33,15 @@ function M.setup()
     key('n', 'K', function()
         return fn.CocAction('hasProvider', 'hover') and async('doHover') or 'K'
     end)
-    key('i', '<Tab>', 'coc#pum#visible()? coc#pum#confirm(): "<TAB>"', {expr = true})
-    key('i', '<C-j>', 'coc#pum#visible()? coc#pum#next(1): coc#refresh()', {expr = true})
-    key('i', '<C-k>', 'coc#pum#visible()? coc#pum#prev(1): coc#refresh()', {expr = true})
+    key('i', '<Tab>', function()
+        return '<C-g>u' .. (pum_visible() and fn['coc#pum#confirm']() or '<Tab>')
+    end, {expr = true})
+    key('i', '<C-j>', function()
+        return '<C-g>u' .. (pum_visible() and fn['coc#pum#next'](1) or refresh())
+    end, {expr = true})
+    key('i', '<C-k>', function()
+        return '<C-g>u' .. (pum_visible() and fn['coc#pum#prev'](1) or refresh())
+    end, {expr = true})
     create('DirChanged', 'lua Coc.new_file_open()') -- Auto reload Coc on changing directory.
     create('CursorHold', "lua Coc.async('highlight')")
     create('CmdLineEnter', 'lua Coc.path_len = #vim.opt.runtimepath:get()') -- Update `Coc.path_len` on any command.
