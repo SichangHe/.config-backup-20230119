@@ -91,3 +91,7 @@ build = 'yarn'
 [[plugins]]
 repo = 'elixir-lsp/coc-elixir'
 build = 'yarn && yarn prepack'
+
+[[plugins]]
+repo = 'fannheyward/coc-julia'
+build = 'yarn'

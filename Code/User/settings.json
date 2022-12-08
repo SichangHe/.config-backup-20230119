@@ -475,4 +475,5 @@
     "[fish]": {
         "editor.defaultFormatter": "zgm.vscode-fish"
     },
+    "clang-tidy.executable": "/opt/homebrew/opt/llvm/bin/clang-tidy",
 }
