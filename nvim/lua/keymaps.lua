@@ -1,10 +1,8 @@
 local M = {}
-local fn = vim.fn
 local set = vim.opt
 local cmd = vim.cmd
-local suggestion_show = function() return fn.pumvisible == 1 end
-local suggestion_selected = function() return fn.empty('completion_selected') == 1 end
 local key = vim.keymap.set
+local current_line = function() return vim.api.nvim_win_get_cursor(0)[1] end
 
 function M.format()
     if set.filetype:get() == 'markdown' then
@@ -19,10 +17,7 @@ function M.set()
     key('i', 'kj', '<Esc>')
     key('i', '<Space>', '<C-g>u<Space>')
     key('i', '<CR>', '<C-g>u<CR>')
-    key('i', '<C-J>', function() return suggestion_show() and '<C-J>' or '<C-N>' end, { expr = true })
-    key('i', '<C-K>', function() return suggestion_show() and '<C-K>' or '<C-P>' end, { expr = true })
     key('n', '<Space>w', '<C-W>')
-    key('n', '<Space>f', ':lua Keymaps.format()<CR>')
     key('n', '<Space>s', ':lua Keymaps.format()<CR>:w<CR>')
     key('n', '<Space>h', ':History<CR>')
     key('n', '<Space>o', ':Files<CR>')
@@ -33,7 +28,9 @@ function M.set()
     key('i', '<Space><Space>mm', '$$<CR><CR>$$<Up>')
     key('n', '<Space>f', ':Grepper -tool rg -buffer -query<CR>')
     key('n', '<Space>ff', ':Grepper -tool rg<CR>')
-    key('n', '<Space>co', ':!co . && co %<CR>')
+    key('n', '<Space>co', function ()
+        return ':!co . && co --goto %:' .. current_line() .. '<CR>'
+    end, { expr = true })
     key('i', '<C-x><C-f>', '<plug>(fzf-complete-path)')
 end
 
