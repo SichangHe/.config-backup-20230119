@@ -464,7 +464,8 @@
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
     "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.formatOnType": true
     },
     "[ruby]": {
         "editor.defaultFormatter": "castwide.solargraph"

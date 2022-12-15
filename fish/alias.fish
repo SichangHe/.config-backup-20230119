@@ -20,7 +20,8 @@ if type -q nvim
 end
 
 # Git
-alias ga='git add . && git status'
+alias gt='git status --short --branch'
+alias ga='git add . && gt'
 alias gc='git commit -am '
 alias gs='git remote | xargs -L1 git push --all && git pull --all'
 

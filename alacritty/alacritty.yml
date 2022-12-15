@@ -874,8 +874,8 @@ key_bindings:
   #- { key: H,              mods: Command|Alt,                action: HideOtherApplications }
   #- { key: M,              mods: Command,                    action: Minimize              }
   - { key: M,              mods: Command,                    action: ReceiveChar           }
-  #- { key: Q,              mods: Command,                    action: Quit                  }
-  #- { key: W,              mods: Command,                    action: Quit                  }
+  - { key: Q,              mods: Command,                    action: ReceiveChar           }
+  - { key: W,              mods: Command,                    action: ReceiveChar           }
   - { key: N,              mods: Command,                    action: CreateNewWindow       }
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
