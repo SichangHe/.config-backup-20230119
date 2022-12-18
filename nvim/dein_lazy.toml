@@ -1,10 +1,8 @@
 # Command providers - activate on command line enter or specific commands
 [[plugins]]
-repo = 'junegunn/fzf'
+repo = 'ibhagwan/fzf-lua'
 on_event = 'CmdLineEnter'
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-on_event = 'CmdLineEnter'
+hook_post_source = "require('fzf-lua').setup{fullscreen = true}"
 
 [[plugins]]
 repo = 'numToStr/Comment.nvim'
@@ -37,10 +35,6 @@ hook_post_source = "lua require('nvim-autopairs').setup {}"
 repo = 'iamcco/markdown-preview.nvim'
 on_cmd = 'MarkdownPreview'
 build = 'cd app && yarn'
-
-[[plugins]]
-repo = 'mhinz/vim-grepper'
-on_event = 'CmdLineEnter'
 
 [[plugins]]
 repo = 'machakann/vim-swap'

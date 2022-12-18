@@ -40,5 +40,6 @@ nix-env -ibA nixpkgs.tealdeer
 nix-env -ibA nixpkgs.tmux
 nix-env -ibA nixpkgs.tokei
 nix-env -ibA nixpkgs.unpaper
+nix-env -iA nixpkgs.viu
 nix-env -ibA nixpkgs.xdg-ninja
 nix-env -ibA nixpkgs.zoxide
