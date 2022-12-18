@@ -3,7 +3,7 @@ repo = 'neoclide/coc-tabnine'
 build = 'yarn'
 
 [[plugins]]
-repo = 'airblade/vim-gitgutter'
+repo = 'lewis6991/gitsigns.nvim'
 
 [[plugins]]
 repo = 'neoclide/coc-snippets'

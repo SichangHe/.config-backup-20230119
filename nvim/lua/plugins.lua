@@ -62,8 +62,7 @@ function M.set()
     }
     g.mkdp_markdown_css = NvimConfigPath .. 'markdown.css'
     g.mkdp_page_title = '${name}'
-    g.gitgutter_sign_modified = '█'
-    g.gitgutter_sign_added = '█'
+    require('gitsigns').setup {}
     g.ale_disable_lsp = true
 end
 
