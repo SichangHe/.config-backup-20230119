@@ -6,6 +6,14 @@ return function(use)
         config = function()
             require('fzf-lua').setup {
                 fullscreen = true,
+                previewers = {
+                    builtin = {
+                        extensions = {
+                            ["png"] = { "viu" },
+                            ["jpg"] = { "viu" },
+                        },
+                    },
+                },
             }
         end,
     }
