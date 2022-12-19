@@ -1,5 +1,6 @@
+U = require('util')
 local M = {}
-local set = vim.opt
+local set = U.set
 
 function M.set()
     set.breakindent = true

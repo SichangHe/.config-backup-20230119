@@ -1,8 +1,9 @@
+U = require('util')
 local M = {}
-local set = vim.opt
-local cmd = vim.cmd
-local key = vim.keymap.set
-local current_line = function() return vim.api.nvim_win_get_cursor(0)[1] end
+local cmd = U.cmd
+local key = U.key
+local set = U.set
+local current_line = function() return U.api.nvim_win_get_cursor(0)[1] end
 
 function M.format()
     if set.filetype:get() == 'markdown' then

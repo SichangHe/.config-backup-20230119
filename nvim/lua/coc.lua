@@ -1,6 +1,7 @@
+U = require('util')
 local M = {}
-local key = vim.keymap.set
-local fn = vim.fn
+local fn = U.fn
+local key = U.key
 local pum_visible = function()
     return fn['coc#pum#visible']() == 1
 end

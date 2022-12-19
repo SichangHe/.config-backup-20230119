@@ -1,5 +1,6 @@
+U = require('util')
 local M = {}
-local key = vim.keymap.set
+local key = U.key
 
 function M.set()
     key('n', '<Space>n', ':noh<CR>')

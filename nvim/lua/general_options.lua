@@ -1,8 +1,10 @@
+U = require('util')
 local M = {}
-local set = vim.opt
+local cmd = U.cmd
+local set = U.set
 
 function M.set()
-    vim.cmd("lang en_US.UTF-8")
+    cmd("lang en_US.UTF-8")
     set.clipboard = 'unnamed'
     set.mousemodel = 'extend'
     set.timeoutlen = 300
