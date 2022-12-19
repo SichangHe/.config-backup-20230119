@@ -5,24 +5,32 @@ local vscode_exists = U.fn.exists('g:vscode') == 1
 
 function AllConfig()
     U = U.use('util')
-    GeneralOptions = U.use('general_options')
-    GeneralKeymaps = U.use('general_keymaps')
+    local use = U.use
+    GeneralOptions = use('general_options')
+    GeneralKeymaps = use('general_keymaps')
     GeneralOptions.set()
     GeneralKeymaps.set()
 
     if vscode_exists then
         -- Running inside vscode
     else
-        Options = U.use('options')
-        Keymaps = U.use('keymaps')
-        Packer = U.use('package_manager')
-        Coc = U.use('coc')
-        Au = U.use('autocmd')
-        Plugins = U.use('plugins')
+        Options = use('options')
+        Keymaps = use('keymaps')
+        Packer = use('package_manager')
+        Coc = use('coc')
+        Au = use('autocmd')
+
+        local coc_plugins = use('coc_plugins')
+        local plugins = use('plugins')
+        local lazy_plugins = use('lazy_plugins')
 
         Options.set()
         Keymaps.set()
-        Packer.startup(Plugins.startup)
+        Packer.startup(function(u)
+            coc_plugins(u)
+            plugins(u)
+            lazy_plugins(u)
+        end)
         Coc.setup()
         Au.set()
     end

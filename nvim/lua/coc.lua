@@ -10,9 +10,6 @@ local fn_async = function(action)
     return function() async(action) end
 end
 local refresh = fn['coc#refresh']
-local create = function(event, command)
-    vim.api.nvim_create_autocmd(event, {command = command})
-end
 
 function M.setup()
     key('n', '<Space>p', ':CocList commands<CR>')
@@ -32,7 +29,7 @@ function M.setup()
     key('i', '<C-k>', function()
         return '<C-g>u' .. (pum_visible() and fn['coc#pum#prev'](1) or refresh())
     end, {expr = true})
-    create('CursorHold', "lua Coc.async('highlight')")
+    U.auto('CursorHold', "lua Coc.async('highlight')")
 end
 
 M.async = async
