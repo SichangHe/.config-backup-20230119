@@ -84,7 +84,7 @@ return function(use)
             }
         end,
     }
-    use { 'p00f/nvim-ts-rainbow' }
+    use { 'mrjones2014/nvim-ts-rainbow' }
     use {
         'petertriho/nvim-scrollbar',
         config = function()

@@ -13,6 +13,7 @@ pandoc
 pkg-config
 python@3.10
 spim
+telnet
 wasmer
 watchexec
 yarn
