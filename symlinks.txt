@@ -11,6 +11,7 @@ ln -s ~/.config/clang-format.yml ~/.clang-format
 ln -s ~/.config/Code ~/Library/Application\ Support/VSCodium
 ln -s ~/.config/Code ~/Library/Application\ Support/Code
 ln -s ~/.config/Code ~/Library/Application\ Support/Code\ -\ Insiders
+ln -s ~/.config/Rime ~/Library/Rime
 
 # linux
 ln -s ~/.config/Code ~/.local/share/code-server

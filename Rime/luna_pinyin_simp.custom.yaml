@@ -1,0 +1,8 @@
+patch:
+  # Fuzzy typing.
+  speller/algebra:
+    - erase/^xx$/
+    - derive/ing$/in/
+    - derive/in$/ing/
+
+  "switches/@0/reset": 1 # Default to English.

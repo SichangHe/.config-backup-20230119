@@ -1,0 +1,9 @@
+patch:
+  menu/page_size: 10
+
+  # Toggle ASCII mode.
+  ascii_composer/switch_key:
+    Shift_L: noop
+    Shift_R: noop
+  key_binder/bindings:
+    - {accept: "Control+space", toggle: ascii_mode, when: always}
