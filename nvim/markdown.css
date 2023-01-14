@@ -589,10 +589,12 @@ main {
 
 #page-ctn {
     max-width: 100vw;
+    min-width: 50vw;
 }
 
 section.markdown-body {
     margin: 32px;
+    margin-bottom: 50vh;
 }
 
 a.anchor svg {
