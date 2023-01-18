@@ -210,9 +210,15 @@ return function(use)
                     { name = 'nvim_lsp' },
                     { name = 'luasnip' },
                     { name = 'buffer' },
+                    { name = 'cmp_tabnine' },
                 },
             }
         end,
+    }
+    use {
+        'tzachar/cmp-tabnine',
+        run = './install.sh',
+        requires = 'hrsh7th/nvim-cmp',
     }
     use {
         'lukas-reineke/indent-blankline.nvim',

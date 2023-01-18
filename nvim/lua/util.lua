@@ -16,6 +16,6 @@ M.use = function(module)
     return require(module)
 end
 
-M.conf_loc = M.fn.expand('$MYVIMRC')
+M.conf_loc = M.fn.expand('~/.config/nvim/')
 
 return M
