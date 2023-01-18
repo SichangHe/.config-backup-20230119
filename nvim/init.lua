@@ -1,5 +1,3 @@
-NvimConfigPath = debug.getinfo(1).source:match("@?(.*/)")
-HomeDir = os.getenv('HOME')
 U = require('util')
 local vscode_exists = U.fn.exists('g:vscode') == 1
 

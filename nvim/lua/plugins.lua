@@ -8,7 +8,7 @@ return function(use)
                 disable_filename = true,
                 sync_scroll_type = 'relative',
             }
-            U.g.mkdp_markdown_css = NvimConfigPath .. 'markdown.css'
+            U.g.mkdp_markdown_css = U.conf_loc .. 'markdown.css'
             U.g.mkdp_page_title = '${name}'
         end,
     }
@@ -128,12 +128,31 @@ return function(use)
         'williamboman/mason-lspconfig.nvim',
         requires = {
             'williamboman/mason.nvim',
+            'hrsh7th/cmp-nvim-lsp',
         },
         config = function()
-            require('mason-lspconfig').setup {}
+            local servers = {
+                clangd = {},
+                elixirls = {},
+                jsonls = {},
+                julials = {},
+                sumneko_lua = {},
+                pyright = {},
+                rust_analyzer = {},
+                solargraph = {},
+                tsserver = {},
+            }
+            local capabilities = require('cmp_nvim_lsp')
+                .default_capabilities(U.lsp.protocol.make_client_capabilities())
+            require('mason-lspconfig').setup {
+                ensure_installed = U.tbl_keys(servers)
+            }
             require('mason-lspconfig').setup_handlers {
                 function(name)
-                    require('lspconfig')[name].setup {}
+                    require('lspconfig')[name].setup {
+                        capabilities = capabilities,
+                        settings = servers[name],
+                    }
                 end
             }
         end,
@@ -158,11 +177,9 @@ return function(use)
                     end,
                 },
                 mapping = cmp.mapping.preset.insert {
-                    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-                    ['<C-f>'] = cmp.mapping.scroll_docs(4),
                     ['<Tab>'] = cmp.mapping(function(fallback)
                         if cmp.visible() then
-                            cmp.mapping.confirm {
+                            cmp.confirm {
                                 behavior = cmp.ConfirmBehavior.Replace,
                                 select = true,
                             }
@@ -176,7 +193,7 @@ return function(use)
                         elseif snip.expand_or_jumpable() then
                             snip.expand_or_jump()
                         else
-                            cmp.mapping.complete {}
+                            cmp.complete {}
                         end
                     end, { 'i', 's' }),
                     ['<C-k>'] = cmp.mapping(function(fallback)

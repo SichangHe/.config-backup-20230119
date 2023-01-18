@@ -10,9 +10,12 @@ M.g = vim.g
 M.lsp = vim.lsp
 M.key = vim.keymap.set
 M.set = vim.opt
+M.tbl_keys = vim.tbl_keys
 M.use = function(module)
     package.loaded[module] = nil
     return require(module)
 end
+
+M.conf_loc = M.fn.expand('$MYVIMRC')
 
 return M
