@@ -110,6 +110,64 @@ return function(use)
                 stages = 'static',
             }
             require('noice').setup {}
-        end
+        end,
+    }
+    use {
+        'williamboman/mason.nvim',
+        config = function()
+            require('mason').setup {}
+        end,
+    }
+    use {
+        'folke/neodev.nvim',
+        config = function()
+            require('neodev').setup {}
+        end,
+    }
+    use {
+        'williamboman/mason-lspconfig.nvim',
+        requires = {
+            'williamboman/mason.nvim',
+        },
+        config = function()
+            require('mason-lspconfig').setup {}
+            require('mason-lspconfig').setup_handlers {
+                function(name)
+                    require('lspconfig')[name].setup {}
+                end
+            }
+        end,
+    }
+    use {
+        'neovim/nvim-lspconfig',
+        requires = {
+            'williamboman/mason-lspconfig.nvim',
+            'folke/neodev.nvim',
+        },
+    }
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+        config = function()
+            local cmp = require('cmp')
+            local snip = require('luasnip')
+            cmp.setup {
+                snippet = {
+                    expand = function(args)
+                        snip.lsp_expand(args.body)
+                    end,
+                },
+                sources = {
+                    {name = 'nvim_lsp'},
+                    {name = 'luasnip'},
+                },
+            }
+        end,
+    }
+    use {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function()
+            require('indent_blankline').setup {}
+        end,
     }
 end
