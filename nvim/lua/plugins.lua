@@ -27,7 +27,7 @@ return function(use)
                 },
                 sections = {
                     lualine_a = { 'mode' },
-                    lualine_b = {{ 'filename', path = 1 }},
+                    lualine_b = { { 'filename', path = 1 } },
                     lualine_c = { 'diagnostics' },
                     lualine_x = { 'filetype' },
                     lualine_y = { 'progress', 'location', 'diff' },
@@ -157,9 +157,42 @@ return function(use)
                         snip.lsp_expand(args.body)
                     end,
                 },
+                mapping = cmp.mapping.preset.insert {
+                    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+                    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+                    ['<Tab>'] = cmp.mapping(function(fallback)
+                        if cmp.visible() then
+                            cmp.mapping.confirm {
+                                behavior = cmp.ConfirmBehavior.Replace,
+                                select = true,
+                            }
+                        else
+                            fallback()
+                        end
+                    end, { 'i', 's' }),
+                    ['<C-j>'] = cmp.mapping(function()
+                        if cmp.visible() then
+                            cmp.select_next_item()
+                        elseif snip.expand_or_jumpable() then
+                            snip.expand_or_jump()
+                        else
+                            cmp.mapping.complete {}
+                        end
+                    end, { 'i', 's' }),
+                    ['<C-k>'] = cmp.mapping(function(fallback)
+                        if cmp.visible() then
+                            cmp.select_prev_item()
+                        elseif snip.jumpable(-1) then
+                            snip.jump(-1)
+                        else
+                            fallback()
+                        end
+                    end, { 'i', 's' }),
+                },
                 sources = {
-                    {name = 'nvim_lsp'},
-                    {name = 'luasnip'},
+                    { name = 'nvim_lsp' },
+                    { name = 'luasnip' },
+                    { name = 'buffer' },
                 },
             }
         end,
