@@ -17,21 +17,17 @@ function AllConfig()
         Options = use('options')
         Keymaps = use('keymaps')
         Packer = use('package_manager')
-        Coc = use('coc')
         Au = use('autocmd')
 
-        local coc_plugins = use('coc_plugins')
         local plugins = use('plugins')
         local lazy_plugins = use('lazy_plugins')
 
         Options.set()
         Keymaps.set()
         Packer.startup(function(u)
-            coc_plugins(u)
             plugins(u)
             lazy_plugins(u)
         end)
-        Coc.setup()
         Au.set()
     end
 end
