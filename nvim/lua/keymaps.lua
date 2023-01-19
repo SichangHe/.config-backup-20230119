@@ -31,6 +31,7 @@ function M.set()
     l('co', function()
         return ':!co . && co --goto %:' .. current_line() .. '<CR>'
     end, { expr = true })
+    l('rrrr', ':lua AllConfig()<CR>:PackerCompile<CR>')
 end
 
 return M

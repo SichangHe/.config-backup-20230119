@@ -17,15 +17,9 @@ function AllConfig()
         Packer = use('package_manager')
         Au = use('autocmd')
 
-        local plugins = use('plugins')
-        local lazy_plugins = use('lazy_plugins')
-
         Options.set()
         Keymaps.set()
-        Packer.startup(function(u)
-            plugins(u)
-            lazy_plugins(u)
-        end)
+        Packer.startup(use('plugins'))
         Au.set()
     end
 end
