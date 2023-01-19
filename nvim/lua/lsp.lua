@@ -20,14 +20,15 @@ return function(use)
                 julials = {},
                 sumneko_lua = {},
                 pyright = {},
-                rust_analyzer = {},
                 solargraph = {},
                 tsserver = {},
             }
+            local ensure = U.tbl_keys(servers)
+            table.insert(ensure, 'rust_analyzer')
             local capabilities = require('cmp_nvim_lsp')
                 .default_capabilities(U.lsp.protocol.make_client_capabilities())
             require('mason-lspconfig').setup {
-                ensure_installed = U.tbl_keys(servers)
+                ensure_installed = ensure,
             }
             require('mason-lspconfig').setup_handlers {
                 function(name)
@@ -77,5 +78,23 @@ return function(use)
             'williamboman/mason-lspconfig.nvim',
             'folke/neodev.nvim',
         },
+    }
+
+    use {
+        'simrat39/rust-tools.nvim',
+        requires = { 'neovim/nvim-lspconfig', 'mfussenegger/nvim-dap' },
+        config = function()
+            require('rust-tools').setup {
+                server = {
+                    settings = {
+                        ['rust-analyzer'] = {
+                            check = {
+                                command = 'clippy',
+                            },
+                        },
+                    },
+                },
+            }
+        end,
     }
 end
