@@ -41,9 +41,33 @@ return function(use)
     }
 
     use {
+        'jay-babu/mason-null-ls.nvim',
+        requires = { 'williamboman/mason.nvim', 'jose-elias-alvarez/null-ls.nvim' },
+        config = function()
+            require('mason-null-ls').setup({
+                ensure_installed = { 'markdownlint' },
+            })
+        end,
+    }
+
+    use {
         'folke/neodev.nvim',
         config = function()
             require('neodev').setup {}
+        end,
+    }
+
+    use {
+        'jose-elias-alvarez/null-ls.nvim',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            local null_ls = require('null-ls')
+            null_ls.setup {
+                sources = {
+                    null_ls.builtins.diagnostics.markdownlint,
+                    null_ls.builtins.formatting.markdownlint
+                },
+            }
         end,
     }
 
