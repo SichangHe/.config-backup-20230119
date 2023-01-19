@@ -46,7 +46,7 @@ return function(use)
         requires = { 'williamboman/mason.nvim', 'jose-elias-alvarez/null-ls.nvim' },
         config = function()
             require('mason-null-ls').setup({
-                ensure_installed = { 'markdownlint' },
+                ensure_installed = { 'black', 'isort', 'markdownlint' },
             })
         end,
     }
@@ -65,8 +65,12 @@ return function(use)
             local null_ls = require('null-ls')
             null_ls.setup {
                 sources = {
+                    -- isort && black
+                    null_ls.builtins.formatting.isort,
+                    null_ls.builtins.formatting.black,
+                    -- markdownlint
                     null_ls.builtins.diagnostics.markdownlint,
-                    null_ls.builtins.formatting.markdownlint
+                    null_ls.builtins.formatting.markdownlint,
                 },
             }
         end,
